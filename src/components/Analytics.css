@@ -1,0 +1,67 @@
+/* Analytics.css */
+.analytics-container {
+  width: 100%;
+  background-color: white;
+  padding: 64px 16px; /* Adjusted padding */
+}
+
+.analytics-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Spacing between grid items */
+}
+
+.analytics-image {
+  width: 100%; /* Image takes full width of its container */
+  max-width: 500px; /* But doesn't exceed 500px */
+  margin: 20px auto; /* Centered image */
+  display: block; /* Prevents image from creating extra space */
+}
+
+.analytics-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px; /* Add some padding to text content */
+}
+
+.analytics-subtitle {
+  color: #00df9a;
+  font-weight: bold;
+  margin-bottom: 10px; /* Add space below subtitle */
+}
+
+.analytics-title {
+  font-size: 2rem; /* Adjusted font size */
+  font-weight: bold;
+  margin-bottom: 15px; /* Add space below title */
+}
+
+.analytics-description {
+  margin-bottom: 20px; /* Add space below description */
+  line-height: 1.6; /* Improve readability */
+}
+
+.analytics-button {
+  background-color: black;
+  color: #00df9a;
+  width: 200px;
+  border-radius: 8px;
+  font-weight: medium;
+  padding: 10px;
+  text-align: center; /* Center the text inside the button */
+  cursor: pointer;
+  border: none;
+}
+
+/* Media Queries (Responsive Design) */
+@media (min-width: 768px) {
+  .analytics-image {
+    margin: 20px 0; /* remove centering on larger screens */
+  }
+}

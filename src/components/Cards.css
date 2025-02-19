@@ -1,0 +1,86 @@
+/* Cards.css */
+.cards-container {
+  width: 100%;
+  padding: 10rem 16px; /* Adjusted padding */
+  background-color: white;
+}
+
+.cards-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 32px; /* Adjusted gap */
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  background-color: white; /* Make sure background is white */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 80px;
+  margin: -3rem auto 20px; /* Adjust margin */
+  background-color: white;
+  display: block;
+}
+
+.card-title {
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.card-price {
+  font-size: 2rem; /* Adjusted font size */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-features {
+  text-align: center;
+  font-weight: medium;
+}
+
+.card-feature {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee; /* Light border */
+  margin: 0 20px;
+}
+
+.card-button {
+  background-color: #00df9a;
+  color: black;
+  width: 200px;
+  border-radius: 8px;
+  font-weight: medium;
+  margin: 20px auto 0; /* Adjust margin */
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Highlighted card styles */
+.card-highlighted {
+  background-color: #f0f0f0; /* Example background color */
+}
+
+.card-button-highlighted {
+  background-color: black;
+  color: #00df9a;
+}

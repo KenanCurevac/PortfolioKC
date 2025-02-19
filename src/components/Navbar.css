@@ -1,0 +1,84 @@
+/* Navbar.css (Corrected) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Increased height for better spacing */
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px; /* Adjusted padding */
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-title {
+  font-size: 24px; /* Adjusted font size */
+  font-weight: bold;
+  color: #00df9a;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-item {
+  padding: 10px 16px; /* Adjusted padding */
+  cursor: pointer;
+}
+
+.navbar-menu-icon {
+  cursor: pointer;
+  display: none; /* Hidden by default on larger screens */
+}
+
+/* Mobile Menu Styles */
+.navbar-mobile-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  border-right: 1px solid gray;
+  background-color: #000300;
+  transition: transform 0.3s ease-in-out; /* Use transform for smoother animation */
+  z-index: 100; /* Ensure it's above other content */
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-mobile-menu.active {
+  transform: translateX(100%); /* Use transform to slide in */
+}
+
+.navbar-title-mobile {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00df9a;
+  margin: 20px;
+}
+
+.navbar-item-mobile {
+  padding: 15px 20px; /* Adjusted padding */
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-menu-icon {
+    display: block; /* Show on smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-mobile-menu {
+    display: none; /* Hide on larger screens */
+  }
+}

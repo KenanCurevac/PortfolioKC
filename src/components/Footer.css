@@ -1,0 +1,74 @@
+/* Footer.css */
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 64px 16px; /* Adjusted padding */
+  background-color: transparent; /* Example background color */
+  color: #ddd; /* Adjusted text color */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 32px; /* Adjusted gap */
+}
+
+.footer-about {
+  grid-column: span 1; /* Takes one column */
+}
+
+.footer-title {
+  width: 100%;
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #00df9a;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  line-height: 1.6;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 75%; /* Adjust width as needed */
+  margin-top: 1.5rem;
+}
+
+.footer-social-icon {
+  cursor: pointer; /* Make icons clickable */
+  color: #ddd;
+}
+
+.footer-links-container {
+  grid-column: span 2; /* Takes two columns */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.footer-links {
+  margin-right: 2rem; /* Add spacing between link groups */
+}
+
+.footer-link-title {
+  font-weight: 500; /* Or font-weight: medium; if your browser supports it */
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.footer-link-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-item {
+  padding: 0.5rem 0;
+  font-size: 0.875rem; /* Adjusted font size */
+  cursor: pointer; /* Make links clickable */
+}

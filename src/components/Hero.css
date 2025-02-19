@@ -1,0 +1,81 @@
+/* Hero.css */
+.hero-container {
+  background: url("../assets/portfolio-hero-bg.jpg") center no-repeat;
+  text-align: center; /* Center content horizontally */
+  color: white;
+  height: 100vh; /* Make the container full viewport height */
+  display: flex; /* Enable flexbox for vertical centering */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto; /* Center the content container */
+  padding: 0 20px; /* Add some padding */
+}
+
+.hero-subtitle {
+  color: #00df9a;
+  font-weight: bold;
+  padding: 10px; /* Add some padding */
+}
+
+.hero-title {
+  font-size: 4rem; /* Adjust as needed */
+  font-weight: bold;
+  padding: 20px 0; /* Adjust padding */
+}
+
+.hero-typed-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the container */
+  justify-content: center; /* Center the content */
+}
+
+.hero-description {
+  font-size: 2rem; /* Adjust as needed */
+  font-weight: bold;
+}
+
+.hero-typed-text {
+  font-size: 2rem; /* Adjust as needed */
+  font-weight: bold;
+  padding-left: 10px; /* Add padding to the left of typed text */
+}
+
+.hero-info {
+  font-size: 1.2rem; /* Adjust as needed */
+  font-weight: bold;
+  color: gray;
+  margin-top: 20px; /* Add margin to separate from the typed text */
+}
+
+.hero-button {
+  background-color: #00df9a;
+  width: 200px;
+  border-radius: 8px; /* Adjust as needed */
+  font-weight: medium;
+  margin: 30px auto; /* Center the button */
+  padding: 10px; /* Adjust padding */
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries (Responsive Design) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem; /* Adjust as needed */
+  }
+
+  .hero-description,
+  .hero-typed-text {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+
+  .hero-info {
+    font-size: 1rem; /* Adjust as needed */
+  }
+}
