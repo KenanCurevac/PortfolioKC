@@ -1,4 +1,11 @@
-/* Analytics.css */
+.title {
+  margin: auto;
+  font-size: 65px;
+  font-weight: bold;
+  width: 100vh;
+  text-align: center;
+}
+
 .analytics-container {
   width: 100%;
   background-color: white;
@@ -37,7 +44,7 @@
 }
 
 .analytics-title {
-  font-size: 2rem; /* Adjusted font size */
+  font-size: 40px; /* Adjusted font size */
   font-weight: bold;
   margin-bottom: 15px; /* Add space below title */
 }
@@ -45,15 +52,17 @@
 .analytics-description {
   margin-bottom: 20px; /* Add space below description */
   line-height: 1.6; /* Improve readability */
+  font-size: 18px;
 }
 
 .analytics-button {
-  background-color: black;
-  color: #00df9a;
-  width: 200px;
+  background-color: white;
+  color: #001f1f;
+  width: 300px;
   border-radius: 8px;
-  font-weight: medium;
-  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 14px;
   text-align: center; /* Center the text inside the button */
   cursor: pointer;
   border: none;

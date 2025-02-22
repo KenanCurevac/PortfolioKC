@@ -1,31 +1,31 @@
 /* Hero.css */
 .hero-container {
   background: url("../assets/portfolio-hero-bg.jpg") center no-repeat;
-  text-align: center; /* Center content horizontally */
   color: white;
   height: 100vh; /* Make the container full viewport height */
   display: flex; /* Enable flexbox for vertical centering */
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
+  flex-direction: column;
+  padding-top: 50px;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 850px;
   width: 100%;
-  margin: 0 auto; /* Center the content container */
-  padding: 0 20px; /* Add some padding */
+  margin: 25px auto;
+  text-align: center;
 }
 
 .hero-subtitle {
   color: #00df9a;
+  font-size: 20px;
   font-weight: bold;
-  padding: 10px; /* Add some padding */
 }
 
 .hero-title {
-  font-size: 4rem; /* Adjust as needed */
+  font-size: 70px;
   font-weight: bold;
-  padding: 20px 0; /* Adjust padding */
+  padding-top: 10px;
+  padding-bottom: 14px;
 }
 
 .hero-typed-container {
@@ -35,33 +35,16 @@
 }
 
 .hero-description {
-  font-size: 2rem; /* Adjust as needed */
+  font-size: 28px;
   font-weight: bold;
+  color: rgb(164, 164, 164);
+  text-indent: 20px;
 }
 
 .hero-typed-text {
   font-size: 2rem; /* Adjust as needed */
   font-weight: bold;
   padding-left: 10px; /* Add padding to the left of typed text */
-}
-
-.hero-info {
-  font-size: 1.2rem; /* Adjust as needed */
-  font-weight: bold;
-  color: gray;
-  margin-top: 20px; /* Add margin to separate from the typed text */
-}
-
-.hero-button {
-  background-color: #00df9a;
-  width: 200px;
-  border-radius: 8px; /* Adjust as needed */
-  font-weight: medium;
-  margin: 30px auto; /* Center the button */
-  padding: 10px; /* Adjust padding */
-  color: black;
-  border: none;
-  cursor: pointer;
 }
 
 /* Media Queries (Responsive Design) */

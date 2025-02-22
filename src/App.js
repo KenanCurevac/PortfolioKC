@@ -1,17 +1,17 @@
-import Analytics from "./components/Analytics";
-import Cards from "./components/Cards";
-import Footer from "./components/Footer";
+import AboutMe from "./components/AboutMe";
+import Career from "./components/Career";
+import Education from "./components/Education";
 import Hero from "./components/Hero";
-import Newsletter from "./components/Newsletter";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <div>
       <Hero />
-      <Analytics />
-      <Newsletter />
-      <Cards />
-      <Footer />
+      <AboutMe />
+      <Education />
+      <Career />
+      <Projects />
     </div>
   );
 }

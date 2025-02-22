@@ -4,29 +4,31 @@
   justify-content: space-between;
   align-items: center;
   height: 60px; /* Increased height for better spacing */
-  max-width: 1240px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px; /* Adjusted padding */
+  padding: 0px 40px;
   color: white;
   background-color: transparent;
 }
 
 .navbar-title {
-  font-size: 24px; /* Adjusted font size */
-  font-weight: bold;
-  color: #00df9a;
+  size: 14px;
+  width: 240px;
+  height: auto;
 }
 
 .navbar-links {
   display: flex;
+  align-items: flex-end;
   list-style: none; /* Remove bullet points */
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default padding */
 }
 
 .navbar-item {
-  padding: 10px 16px; /* Adjusted padding */
+  padding: 0px 16px 24px 16px;
   cursor: pointer;
+  font-size: 19px;
 }
 
 .navbar-menu-icon {

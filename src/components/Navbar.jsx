@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import logo from "../assets/port-logo-org.png";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -11,13 +12,13 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <h1 className="navbar-title">REACT.</h1>
+      <img src={logo} className="navbar-title" />
       <ul className="navbar-links">
-        <li className="navbar-item">Home</li>
-        <li className="navbar-item">Company</li>
-        <li className="navbar-item">Resources</li>
-        <li className="navbar-item">About</li>
-        <li className="navbar-item">Contact</li>
+        <li className="navbar-item">Über mich</li>
+        <li className="navbar-item">Bildung</li>
+        <li className="navbar-item">Berufserfahrung</li>
+        <li className="navbar-item">Projekte</li>
+        <li className="navbar-item">Kontakt</li>
       </ul>
       <div onClick={handleNav} className="navbar-menu-icon">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
