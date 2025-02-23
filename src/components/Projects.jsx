@@ -3,6 +3,10 @@ import Laptop from "../assets/laptop.jpg";
 import "./Content.css"; // Import your CSS file
 
 export default function Projects() {
+  function openProject(url) {
+    window.open(url, "_blank");
+  }
+
   return (
     <div
       className="analytics-container"
@@ -24,7 +28,12 @@ export default function Projects() {
             </p>
             <p>Technologien: React, TypeScript, Material UI, The Trivia API</p>
           </div>
-          <button className="analytics-button">Zum Projekt</button>
+          <button
+            className="analytics-button"
+            onClick={() => openProject("https://quiz-app-kenan.vercel.app/")}
+          >
+            Zum Projekt
+          </button>
         </div>
         <img className="analytics-image" src={Laptop} alt="Laptop" />
       </div>
@@ -52,12 +61,15 @@ export default function Projects() {
               API
             </p>
           </div>
-          <button className="analytics-button">Zum Projekt</button>
+          <button
+            className="analytics-button"
+            onClick={() => openProject("https://movie-db-kenan.vercel.app/")}
+          >
+            Zum Projekt
+          </button>
         </div>
         <img className="analytics-image" src={Laptop} alt="Laptop" />
       </div>
     </div>
   );
 }
-
-//quiz-app-kenan.vercel.app

@@ -63,9 +63,13 @@
   font-weight: bold;
   font-size: 20px;
   padding: 14px;
-  text-align: center; /* Center the text inside the button */
+  text-align: center;
   cursor: pointer;
   border: none;
+}
+
+.analytics-button:hover {
+  background-color: #00df9a;
 }
 
 /* Media Queries (Responsive Design) */
