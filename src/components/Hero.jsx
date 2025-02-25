@@ -1,15 +1,20 @@
+import { useEffect } from "react";
 import "./Hero.css";
-import React from "react";
-import { ReactTyped } from "react-typed";
 import Navbar from "./Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Hero() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="hero-container">
       <Navbar />
-      <div className="hero-content">
+      <div className="hero-content" data-aos="fade-up" data-aos-duration="1200">
         <p className="hero-subtitle">FRONTEND SOFTWARE ENTWICKLER</p>
-        <h1 className="hero-title">
+        <h1 className="hero-title" data-aos="zoom-in">
           Hallo, ich bin{" "}
           <span
             style={{

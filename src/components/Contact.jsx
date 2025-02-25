@@ -1,9 +1,12 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import Snackbar, { SnackbarCloseReason } from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,9 +27,14 @@ export default function Contact() {
   const [snackbarState, setSnackbarState] = useState({
     open: false,
     message: "",
+    severity: "",
   });
 
   const formRef = useRef();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   function handleForm(event) {
     setFormData((prevFormData) => ({
@@ -54,8 +62,8 @@ export default function Contact() {
     }));
   }
 
-  function handleOpenSnackbar(message) {
-    setSnackbarState({ open: true, message: message });
+  function handleOpenSnackbar(message, severity) {
+    setSnackbarState({ open: true, message: message, severity: severity });
   }
 
   function handleCloseSnackbar(event, reason) {
@@ -66,6 +74,7 @@ export default function Contact() {
     setSnackbarState({
       open: false,
       message: "",
+      severity: "",
     });
   }
 
@@ -79,9 +88,9 @@ export default function Contact() {
         formRef.current,
         "Lg4RZhibkuSe1v_fb"
       )
-      .then(() => handleOpenSnackbar("Message sent successfully!"))
+      .then(() => handleOpenSnackbar("Message sent successfully!", "success"))
       .catch(() =>
-        handleOpenSnackbar("Failed to send message, please try again.")
+        handleOpenSnackbar("Failed to send message, please try again.", "error")
       );
 
     setFormData({ user_name: "", user_email: "", message: "" });
@@ -93,13 +102,29 @@ export default function Contact() {
         open={snackbarState.open}
         autoHideDuration={3000}
         onClose={handleCloseSnackbar}
-        message={snackbarState.message}
-      />
+      >
+        <Alert
+          severity={snackbarState.severity}
+          variant="filled"
+          sx={{ width: "23vw" }}
+        >
+          {snackbarState.message}
+        </Alert>
+      </Snackbar>
 
-      <div className="title" style={{ color: "#00df9a" }}>
+      <div
+        className="title"
+        style={{ color: "#00df9a" }}
+        data-aos="zoom-in"
+        data-aos-duration="600"
+      >
         Kontakt
       </div>
-      <div className="inner-content">
+      <div
+        className="inner-content"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
         <div className="contact-title">
           <h1>Schreib mir eine Nachricht!</h1>
           <p>

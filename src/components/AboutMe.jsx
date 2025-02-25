@@ -1,15 +1,39 @@
+import { useEffect } from "react";
 import Laptop from "../assets/laptop.jpg";
-import "./Content.css"; // Import your CSS file
+import "./Content.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import react from "../assets/react.svg";
 
 export default function AboutMe() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="analytics-container">
-      <div className="title" style={{ color: "#00df9a" }}>
+      <div
+        className="title"
+        style={{ color: "#00df9a" }}
+        data-aos="zoom-in"
+        data-aos-duration="600"
+      >
         Über mich
       </div>
       <div className="analytics-content">
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
-        <div className="analytics-text-content">
+        <img
+          className="analytics-image"
+          src={Laptop}
+          alt="Laptop"
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#002E2E" }}>
             Ein paar Worte über mich
           </h1>
@@ -41,8 +65,19 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="analytics-content">
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
-        <div className="analytics-text-content">
+        <img
+          className="analytics-image"
+          src={react}
+          alt="React"
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#002E2E" }}>
             Frontend-Kenntnisse
           </h1>

@@ -1,8 +1,15 @@
-import React from "react";
-import Laptop from "../assets/laptop.jpg";
-import "./Content.css"; // Import your CSS file
+import React, { useEffect } from "react";
+import "./Content.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import quizapp from "../assets/quizapp.png";
+import moviedb from "../assets/moviedb.png";
 
 export default function Projects() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   function openProject(url) {
     window.open(url, "_blank");
   }
@@ -12,11 +19,20 @@ export default function Projects() {
       className="analytics-container"
       style={{ backgroundColor: "#001F1F", color: "white" }}
     >
-      <div className="title" style={{ color: "#00df9a" }}>
+      <div
+        className="title"
+        style={{ color: "#00df9a" }}
+        data-aos="zoom-in"
+        data-aos-duration="600"
+      >
         Projekte
       </div>
       <div className="analytics-content">
-        <div className="analytics-text-content">
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#00df9a" }}>
             Quiz-App
           </h1>
@@ -35,10 +51,21 @@ export default function Projects() {
             Zum Projekt
           </button>
         </div>
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
+        <img
+          className="analytics-image"
+          src={quizapp}
+          alt="Quiz-App"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
       </div>
       <div className="analytics-content">
-        <div className="analytics-text-content">
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#00df9a" }}>
             Film Atlas
           </h1>
@@ -68,7 +95,14 @@ export default function Projects() {
             Zum Projekt
           </button>
         </div>
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
+        <img
+          className="analytics-image"
+          src={moviedb}
+          alt="Movie Database"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
       </div>
     </div>
   );

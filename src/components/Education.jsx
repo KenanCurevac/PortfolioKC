@@ -1,18 +1,34 @@
-import React from "react";
-import Laptop from "../assets/laptop.jpg";
-import "./Content.css"; // Import your CSS file
+import React, { useEffect } from "react";
+import "./Content.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import goethe from "../assets/goethe.png";
+import university from "../assets/univerzitet.png";
 
 export default function Education() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div
       className="analytics-container"
       style={{ backgroundColor: "#001F1F", color: "white" }}
     >
-      <div className="title" style={{ color: "#00df9a" }}>
+      <div
+        className="title"
+        style={{ color: "#00df9a" }}
+        data-aos="zoom-in"
+        data-aos-duration="600"
+      >
         Bildung
       </div>
       <div className="analytics-content">
-        <div className="analytics-text-content">
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#00df9a" }}>
             Studium
           </h1>
@@ -21,12 +37,22 @@ export default function Education() {
             Universität in Sarajevo, Bosnien-Herzegowina, mit dem Schwerpunkt
             Straßenverkehr.
           </p>
-          {/*<button className="analytics-button">Get Started</button>*/}
         </div>
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
+        <img
+          className="analytics-image"
+          src={university}
+          alt="University of Sarajevo"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
       </div>
       <div className="analytics-content">
-        <div className="analytics-text-content">
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#00df9a" }}>
             Sprachen
           </h1>
@@ -35,7 +61,14 @@ export default function Education() {
             Zudem spreche ich fließend Englisch (C1-Niveau).
           </p>
         </div>
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
+        <img
+          className="analytics-image"
+          src={goethe}
+          alt="Goethe-Institut"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
       </div>
     </div>
   );

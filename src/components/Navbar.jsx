@@ -1,17 +1,28 @@
 import "./Navbar.css";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import logo from "../assets/port-logo-org.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className="navbar">
+    <div
+      className="navbar"
+      data-aos="fade-down"
+      data-aos-delay="400"
+      data-aos-duration="800"
+    >
       <img src={logo} className="navbar-title" />
       <ul className="navbar-links">
         <li className="navbar-item">Über mich</li>

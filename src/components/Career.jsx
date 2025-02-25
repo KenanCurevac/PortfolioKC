@@ -1,15 +1,39 @@
-import Laptop from "../assets/laptop.jpg";
-import "./Content.css"; // Import your CSS file
+import { useEffect } from "react";
+import "./Content.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import bloola from "../assets/bloola.png";
+import ccc from "../assets/ccc.jpg";
 
 export default function Career() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="analytics-container">
-      <div className="title" style={{ color: "#00df9a" }}>
+      <div
+        className="title"
+        style={{ color: "#00df9a" }}
+        data-aos="zoom-in"
+        data-aos-duration="600"
+      >
         Berufserfahrung
       </div>
       <div className="analytics-content">
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
-        <div className="analytics-text-content">
+        <img
+          className="analytics-image"
+          src={bloola}
+          alt="Bloola GmbH"
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#002E2E" }}>
             QA bei Bloola GmbH
           </h1>
@@ -24,8 +48,19 @@ export default function Career() {
         </div>
       </div>
       <div className="analytics-content">
-        <img className="analytics-image" src={Laptop} alt="Laptop" />
-        <div className="analytics-text-content">
+        <img
+          className="analytics-image"
+          src={ccc}
+          alt="CCC Call Center"
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        />
+        <div
+          className="analytics-text-content"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
           <h1 className="analytics-title" style={{ color: "#002E2E" }}>
             Tätigkeit als Call Agent
           </h1>
