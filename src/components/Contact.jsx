@@ -1,13 +1,28 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./Contact.css"; // Import your CSS file
+import "./Contact.css";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
+import Snackbar, { SnackbarCloseReason } from "@mui/material/Snackbar";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
+    message: "",
+  });
+  const [error, setError] = useState({
+    user_name: false,
+    user_email: false,
+    message: false,
+  });
+  const [touched, setTouched] = useState({
+    user_name: false,
+    user_email: false,
+    message: false,
+  });
+  const [snackbarState, setSnackbarState] = useState({
+    open: false,
     message: "",
   });
 
@@ -18,9 +33,43 @@ export default function Contact() {
       ...prevFormData,
       [event.target.name]: event.target.value,
     }));
+
+    if (event.target.value.trim().length > 0 && event.target.validity.valid) {
+      setError((prevError) => ({
+        ...prevError,
+        [event.target.name]: false,
+      }));
+    } else {
+      setError((prevError) => ({
+        ...prevError,
+        [event.target.name]: true,
+      }));
+    }
   }
 
-  const sendEmail = (event) => {
+  function handleBlur(event) {
+    setTouched((prevTouched) => ({
+      ...prevTouched,
+      [event.target.name]: true,
+    }));
+  }
+
+  function handleOpenSnackbar(message) {
+    setSnackbarState({ open: true, message: message });
+  }
+
+  function handleCloseSnackbar(event, reason) {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setSnackbarState({
+      open: false,
+      message: "",
+    });
+  }
+
+  function sendEmail(event) {
     event.preventDefault();
 
     emailjs
@@ -30,22 +79,23 @@ export default function Contact() {
         formRef.current,
         "Lg4RZhibkuSe1v_fb"
       )
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          alert("Failed to send message, please try again.");
-        }
+      .then(() => handleOpenSnackbar("Message sent successfully!"))
+      .catch(() =>
+        handleOpenSnackbar("Failed to send message, please try again.")
       );
 
     setFormData({ user_name: "", user_email: "", message: "" });
-  };
+  }
 
   return (
     <div className="analytics-container">
+      <Snackbar
+        open={snackbarState.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        message={snackbarState.message}
+      />
+
       <div className="title" style={{ color: "#00df9a" }}>
         Kontakt
       </div>
@@ -72,7 +122,15 @@ export default function Contact() {
                 name="user_name"
                 variant="filled"
                 value={formData.user_name}
-                onChange={handleForm}
+                onInput={handleForm}
+                helperText={
+                  error.user_name && touched.user_name
+                    ? "Please enter your name"
+                    : ""
+                }
+                required
+                error={error.user_name && touched.user_name}
+                onBlur={handleBlur}
               />
             </div>
             <div className="email-input">
@@ -83,7 +141,15 @@ export default function Contact() {
                 name="user_email"
                 variant="filled"
                 value={formData.user_email}
-                onChange={handleForm}
+                onInput={handleForm}
+                helperText={
+                  error.user_email && touched.user_email
+                    ? "Please enter a correct e-mail"
+                    : ""
+                }
+                required
+                error={error.user_email && touched.user_email}
+                onBlur={handleBlur}
               />
             </div>
           </div>
@@ -93,16 +159,30 @@ export default function Contact() {
             <TextField
               id="textfield"
               name="message"
-              placeholder="Hallo, lass uns über mögliche Zusammenarbeit sprechen!"
+              placeholder="Hallo, lass uns über eine mögliche Zusammenarbeit sprechen!"
               multiline
               rows={3}
               variant="filled"
               value={formData.message}
-              onChange={handleForm}
+              onInput={handleForm}
+              helperText={
+                error.message && touched.message ? "Please write a message" : ""
+              }
+              required
+              error={error.message && touched.message}
+              onBlur={handleBlur}
             />
           </div>
 
-          <button className="sauce-button" type="submit" id="submit-button">
+          <button
+            className="sauce-button"
+            type="submit"
+            id="submit-button"
+            disabled={
+              Object.values(error).includes(true) ||
+              Object.values(formData).some((value) => value.trim() === "")
+            }
+          >
             Senden
           </button>
         </form>

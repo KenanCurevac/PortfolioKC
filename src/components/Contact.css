@@ -67,6 +67,11 @@
   background-color: #00c87c;
 }
 
+.sauce-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .bow-arrow {
   fill: none;
   stroke: #4831d4;
