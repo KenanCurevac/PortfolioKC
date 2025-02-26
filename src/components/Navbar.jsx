@@ -1,9 +1,14 @@
 import "./Navbar.css";
 import { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import logo from "../assets/port-logo-org.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import MenuIcon from "@mui/icons-material/Menu";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Navbar({
   scrollToSection,
@@ -13,15 +18,65 @@ export default function Navbar({
   projectsRef,
   contactRef,
 }) {
-  const [nav, setNav] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  function toggleDrawer(newOpen) {
+    setOpen(newOpen);
+  }
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  function handleNav() {
-    setNav(!nav);
-  }
+  const drawerList = (
+    <List className="drawer-list">
+      <ListItem
+        className="navbar-item"
+        onClick={() => {
+          scrollToSection(aboutRef);
+          toggleDrawer(false);
+        }}
+      >
+        Über mich
+      </ListItem>
+      <ListItem
+        className="navbar-item"
+        onClick={() => {
+          scrollToSection(educationRef);
+          toggleDrawer(false);
+        }}
+      >
+        Bildung
+      </ListItem>
+      <ListItem
+        className="navbar-item"
+        onClick={() => {
+          scrollToSection(careerRef);
+          toggleDrawer(false);
+        }}
+      >
+        Berufserfahrung
+      </ListItem>
+      <ListItem
+        className="navbar-item"
+        onClick={() => {
+          scrollToSection(projectsRef);
+          toggleDrawer(false);
+        }}
+      >
+        Projekte
+      </ListItem>
+      <ListItem
+        className="navbar-item"
+        onClick={() => {
+          scrollToSection(contactRef);
+          toggleDrawer(false);
+        }}
+      >
+        Kontakt
+      </ListItem>
+    </List>
+  );
 
   return (
     <div
@@ -54,17 +109,18 @@ export default function Navbar({
           Kontakt
         </li>
       </ul>
-      <div onClick={handleNav} className="navbar-menu-icon">
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-      </div>
-      <ul className={nav ? "navbar-mobile-menu active" : "navbar-mobile-menu"}>
-        <h1 className="navbar-title-mobile">REACT.</h1>
-        <li className="navbar-item-mobile">Home</li>
-        <li className="navbar-item-mobile">Company</li>
-        <li className="navbar-item-mobile">Resources</li>
-        <li className="navbar-item-mobile">About</li>
-        <li className="navbar-item-mobile">Contact</li>
-      </ul>
+      <Button onClick={() => toggleDrawer(true)} className="mobile-menu">
+        <MenuIcon />
+      </Button>
+      <Drawer open={open} onClose={() => toggleDrawer(false)} anchor="right">
+        <Button
+          onClick={() => toggleDrawer(false)}
+          className="navbar-close-button"
+        >
+          <CloseIcon />
+        </Button>
+        {drawerList}
+      </Drawer>
     </div>
   );
 }
