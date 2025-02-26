@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Laptop from "../assets/laptop.jpg";
 import "./Content.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -23,8 +22,7 @@ export default function AboutMe() {
       <div className="analytics-content">
         <img
           className="analytics-image"
-          src={Laptop}
-          alt="Laptop"
+          alt="Photo"
           data-aos="fade-right"
           data-aos-delay="400"
           data-aos-duration="800"

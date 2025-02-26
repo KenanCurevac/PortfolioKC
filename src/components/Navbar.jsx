@@ -5,16 +5,23 @@ import logo from "../assets/port-logo-org.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Navbar() {
+export default function Navbar({
+  scrollToSection,
+  aboutRef,
+  educationRef,
+  careerRef,
+  projectsRef,
+  contactRef,
+}) {
   const [nav, setNav] = useState(false);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const handleNav = () => {
+  function handleNav() {
     setNav(!nav);
-  };
+  }
 
   return (
     <div
@@ -25,11 +32,27 @@ export default function Navbar() {
     >
       <img src={logo} className="navbar-title" />
       <ul className="navbar-links">
-        <li className="navbar-item">Über mich</li>
-        <li className="navbar-item">Bildung</li>
-        <li className="navbar-item">Berufserfahrung</li>
-        <li className="navbar-item">Projekte</li>
-        <li className="navbar-item">Kontakt</li>
+        <li className="navbar-item" onClick={() => scrollToSection(aboutRef)}>
+          Über mich
+        </li>
+        <li
+          className="navbar-item"
+          onClick={() => scrollToSection(educationRef)}
+        >
+          Bildung
+        </li>
+        <li className="navbar-item" onClick={() => scrollToSection(careerRef)}>
+          Berufserfahrung
+        </li>
+        <li
+          className="navbar-item"
+          onClick={() => scrollToSection(projectsRef)}
+        >
+          Projekte
+        </li>
+        <li className="navbar-item" onClick={() => scrollToSection(contactRef)}>
+          Kontakt
+        </li>
       </ul>
       <div onClick={handleNav} className="navbar-menu-icon">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}

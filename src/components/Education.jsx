@@ -61,14 +61,23 @@ export default function Education() {
             Zudem spreche ich fließend Englisch (C1-Niveau).
           </p>
         </div>
-        <img
-          className="analytics-image"
-          src={goethe}
-          alt="Goethe-Institut"
-          data-aos="fade-left"
-          data-aos-delay="400"
-          data-aos-duration="800"
-        />
+        <div
+          style={{
+            width: "35vw",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            className="goethe-image"
+            src={goethe}
+            alt="Goethe-Institut"
+            data-aos="fade-left"
+            data-aos-delay="400"
+            data-aos-duration="800"
+          />
+        </div>
       </div>
     </div>
   );

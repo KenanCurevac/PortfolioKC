@@ -4,14 +4,14 @@ import Navbar from "./Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Hero() {
+export default function Hero(props) {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
     <div className="hero-container">
-      <Navbar />
+      <Navbar {...props} />
       <div className="hero-content" data-aos="fade-up" data-aos-duration="1200">
         <p className="hero-subtitle">FRONTEND SOFTWARE ENTWICKLER</p>
         <h1 className="hero-title" data-aos="zoom-in">

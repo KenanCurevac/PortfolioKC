@@ -1,4 +1,4 @@
-.analytics-container {
+.analytics-container-contact {
   padding: 20px;
 }
 
@@ -8,6 +8,41 @@
   font-weight: bold;
   width: 100vh;
   text-align: center;
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.separator-line {
+  background-color: #002e2e;
+  width: 14vw;
+  height: 2px;
+  margin: auto 0px;
+}
+
+.separator-or {
+  font-size: 35px;
+  margin: auto 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.icon {
+  font-size: 120px !important;
+  color: #002e2e !important;
+}
+
+.icon:hover {
+  color: #00df9a !important;
 }
 
 .inner-content {
@@ -20,17 +55,17 @@
 .contact-title {
   width: 100%;
   text-align: center;
+  color: #002e2e;
 }
 
 .contact-title h1 {
   font-size: 2.5rem;
-  color: #333;
   margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 .contact-title p {
   font-size: 1.1rem;
-  color: #666;
 }
 
 .contact-form {
@@ -50,7 +85,7 @@
 }
 
 .sauce-button {
-  background-color: #00df9a;
+  background-color: #002e2e;
   color: white;
   width: 300px;
   margin: auto;
@@ -64,7 +99,7 @@
 }
 
 .sauce-button:hover {
-  background-color: #00c87c;
+  background-color: #00df9a;
 }
 
 .sauce-button:disabled {
@@ -90,4 +125,5 @@
 .MuiInputBase-input {
   padding: 15px 15px 10px !important;
   font-size: 20px !important;
+  color: #002e2e !important;
 }

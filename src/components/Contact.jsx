@@ -7,6 +7,8 @@ import Snackbar, { SnackbarCloseReason } from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -88,16 +90,21 @@ export default function Contact() {
         formRef.current,
         "Lg4RZhibkuSe1v_fb"
       )
-      .then(() => handleOpenSnackbar("Message sent successfully!", "success"))
+      .then(() =>
+        handleOpenSnackbar("Nachricht erfolgreich gesendet!", "success")
+      )
       .catch(() =>
-        handleOpenSnackbar("Failed to send message, please try again.", "error")
+        handleOpenSnackbar(
+          "Nachricht konnte nicht gesendet werden, bitte versuche es erneut.",
+          "error"
+        )
       );
 
     setFormData({ user_name: "", user_email: "", message: "" });
   }
 
   return (
-    <div className="analytics-container">
+    <div className="analytics-container-contact">
       <Snackbar
         open={snackbarState.open}
         autoHideDuration={3000}
@@ -121,6 +128,21 @@ export default function Contact() {
         Kontakt
       </div>
       <div
+        className="icon-container"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
+        <LinkedInIcon className="icon" />
+        <a href="https://github.com/KenanCurevac" target="_blank">
+          <GitHubIcon className="icon" />
+        </a>
+      </div>
+      <div className="separator" data-aos="fade-up" data-aos-duration="600">
+        <div className="separator-line"></div>
+        <div className="separator-or">oder</div>
+        <div className="separator-line"></div>
+      </div>
+      <div
         className="inner-content"
         data-aos="fade-up"
         data-aos-duration="1200"
@@ -141,7 +163,14 @@ export default function Contact() {
         >
           <div className="email-inputs">
             <div className="email-input">
-              <InputLabel htmlFor="name">Dein Name</InputLabel>
+              <InputLabel
+                htmlFor="name"
+                style={{
+                  color: "#002e2e",
+                }}
+              >
+                Dein Name
+              </InputLabel>
               <TextField
                 id="name"
                 name="user_name"
@@ -150,7 +179,7 @@ export default function Contact() {
                 onInput={handleForm}
                 helperText={
                   error.user_name && touched.user_name
-                    ? "Please enter your name"
+                    ? "Bitte geben Sie Ihren Namen ein"
                     : ""
                 }
                 required
@@ -159,7 +188,14 @@ export default function Contact() {
               />
             </div>
             <div className="email-input">
-              <InputLabel htmlFor="email">E-mail Adresse</InputLabel>
+              <InputLabel
+                htmlFor="email"
+                style={{
+                  color: "#002e2e",
+                }}
+              >
+                E-mail Adresse
+              </InputLabel>
               <TextField
                 id="email"
                 type="email"
@@ -169,7 +205,7 @@ export default function Contact() {
                 onInput={handleForm}
                 helperText={
                   error.user_email && touched.user_email
-                    ? "Please enter a correct e-mail"
+                    ? "Bitte geben Sie eine gültige E-Mail-Adresse ein"
                     : ""
                 }
                 required
@@ -180,7 +216,14 @@ export default function Contact() {
           </div>
 
           <div>
-            <InputLabel htmlFor="textfield">Deine Nachricht</InputLabel>
+            <InputLabel
+              htmlFor="textfield"
+              style={{
+                color: "#002e2e",
+              }}
+            >
+              Deine Nachricht
+            </InputLabel>
             <TextField
               id="textfield"
               name="message"
@@ -191,7 +234,9 @@ export default function Contact() {
               value={formData.message}
               onInput={handleForm}
               helperText={
-                error.message && touched.message ? "Please write a message" : ""
+                error.message && touched.message
+                  ? "Bitte schreiben Sie eine Nachricht"
+                  : ""
               }
               required
               error={error.message && touched.message}
@@ -212,8 +257,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-
-      <div className="analytics-content"></div>
     </div>
   );
 }

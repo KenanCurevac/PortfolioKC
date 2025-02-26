@@ -80,8 +80,8 @@ export default function Projects() {
               Die Datenbank listet nicht nur aktuelle Kinofilme und beliebte
               Serien auf, sondern bietet auch einen Ausblick auf kommende Filme
               (mit Trailern) und Serien sowie eine Übersicht der aktuell im TV
-              laufenden Serien bietet. Abgerundet wird das Angebot durch
-              Top-Listen der am besten bewerteten Produktionen.
+              laufenden Serien. Abgerundet wird das Angebot durch Top-Listen der
+              am besten bewerteten Produktionen.
             </p>
             <p>
               Technologien: React, TypeScript, Material UI, The Movie Database
