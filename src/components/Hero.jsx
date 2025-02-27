@@ -24,13 +24,11 @@ export default function Hero(props) {
             Kenan Ćurevac.
           </span>
         </h1>
-        <div className="hero-typed-container">
-          <p className="hero-description">
-            Mit Leidenschaft für Frontend-Entwicklung, entwickle ich
-            benutzerfreundliche Anwendungen und freue mich auf die
-            Zusammenarbeit mit einem motivierten Team.
-          </p>
-        </div>
+        <p className="hero-description">
+          Mit Leidenschaft für Frontend-Entwicklung, entwickle ich
+          benutzerfreundliche Anwendungen und freue mich auf die Zusammenarbeit
+          mit einem motivierten Team.
+        </p>
       </div>
     </div>
   );

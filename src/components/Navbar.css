@@ -6,7 +6,6 @@
   height: 60px; /* Increased height for better spacing */
   width: 100%;
   margin: 0 auto;
-  padding: 0px 40px;
   color: white;
   background-color: transparent;
 }
@@ -35,8 +34,12 @@
   color: #00df9a;
 }
 
+.mobile-menu {
+  display: none !important;
+}
+
 .mobile-menu .MuiSvgIcon-root {
-  font-size: 45px !important;
+  font-size: 55px !important;
   color: white !important;
 }
 
@@ -56,11 +59,11 @@
 
 .navbar-close-button.MuiButton-root {
   position: absolute !important;
-  top: 5vh !important;
+  top: 4vh !important;
 }
 
 .navbar-close-button .MuiSvgIcon-root {
-  font-size: 45px !important;
+  font-size: 60px !important;
   color: white !important;
 }
 
@@ -78,11 +81,11 @@
   color: #001f1f !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .navbar-links {
     display: none;
   }
-  .navbar-menu-icon {
-    display: block; /* Show on smaller screens */
+  .mobile-menu {
+    display: block !important;
   }
 }

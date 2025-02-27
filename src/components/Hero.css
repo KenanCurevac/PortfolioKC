@@ -1,11 +1,10 @@
-/* Hero.css */
 .hero-container {
   background: url("../assets/portfolio-hero-bg.jpg") center no-repeat;
   color: white;
-  height: 100vh; /* Make the container full viewport height */
-  display: flex; /* Enable flexbox for vertical centering */
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding: 40px 40px 0px;
 }
 
 .hero-content {
@@ -25,13 +24,13 @@
   font-size: 70px;
   font-weight: bold;
   padding-top: 10px;
-  padding-bottom: 14px;
+  padding-bottom: 36px;
 }
 
 .hero-typed-container {
   display: flex;
-  align-items: center; /* Align items vertically in the container */
-  justify-content: center; /* Center the content */
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-description {
@@ -47,18 +46,34 @@
   padding-left: 10px; /* Add padding to the left of typed text */
 }
 
-/* Media Queries (Responsive Design) */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .hero-title {
-    font-size: 3rem; /* Adjust as needed */
+    font-size: 64px;
+    padding-top: 6px;
+    padding-bottom: 33px;
   }
 
-  .hero-description,
-  .hero-typed-text {
-    font-size: 1.5rem; /* Adjust as needed */
+  .hero-subtitle {
+    font-size: 18px;
   }
 
-  .hero-info {
-    font-size: 1rem; /* Adjust as needed */
+  .hero-description {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-title {
+    font-size: 60px;
+    padding-top: 2px;
+    padding-bottom: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-description {
+    font-size: 22px;
   }
 }

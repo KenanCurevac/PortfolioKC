@@ -61,14 +61,7 @@ export default function Education() {
             Zudem spreche ich fließend Englisch (C1-Niveau).
           </p>
         </div>
-        <div
-          style={{
-            width: "35vw",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className="goethe-container">
           <img
             className="goethe-image"
             src={goethe}

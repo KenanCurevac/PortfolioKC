@@ -120,7 +120,7 @@ export default function Contact() {
       </Snackbar>
 
       <div
-        className="title"
+        className="title-contact"
         style={{ color: "#00df9a" }}
         data-aos="zoom-in"
         data-aos-duration="600"
@@ -185,6 +185,7 @@ export default function Contact() {
                 required
                 error={error.user_name && touched.user_name}
                 onBlur={handleBlur}
+                color="success"
               />
             </div>
             <div className="email-input">
@@ -211,6 +212,7 @@ export default function Contact() {
                 required
                 error={error.user_email && touched.user_email}
                 onBlur={handleBlur}
+                color="success"
               />
             </div>
           </div>
@@ -241,6 +243,7 @@ export default function Contact() {
               required
               error={error.message && touched.message}
               onBlur={handleBlur}
+              color="success"
             />
           </div>
 

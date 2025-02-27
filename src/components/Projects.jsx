@@ -27,7 +27,7 @@ export default function Projects() {
       >
         Projekte
       </div>
-      <div className="analytics-content">
+      <div className="analytics-content wide-picture-content">
         <div
           className="analytics-text-content"
           data-aos="zoom-in"
@@ -60,9 +60,9 @@ export default function Projects() {
           data-aos-duration="800"
         />
       </div>
-      <div className="analytics-content">
+      <div className="analytics-content wide-picture-content">
         <div
-          className="analytics-text-content"
+          className="analytics-text-content "
           data-aos="zoom-in"
           data-aos-duration="1200"
         >

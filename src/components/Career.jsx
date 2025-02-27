@@ -20,7 +20,7 @@ export default function Career() {
       >
         Berufserfahrung
       </div>
-      <div className="analytics-content">
+      <div className="analytics-content column-reverse">
         <img
           className="analytics-image"
           src={bloola}
@@ -47,7 +47,7 @@ export default function Career() {
           </div>
         </div>
       </div>
-      <div className="analytics-content">
+      <div className="analytics-content column-reverse">
         <img
           className="analytics-image"
           src={ccc}

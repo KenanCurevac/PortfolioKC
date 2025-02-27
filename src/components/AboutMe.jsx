@@ -3,6 +3,7 @@ import "./Content.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import react from "../assets/react.svg";
+import cb from "../assets/cb.jpg";
 
 export default function AboutMe() {
   useEffect(() => {
@@ -19,13 +20,15 @@ export default function AboutMe() {
       >
         Über mich
       </div>
-      <div className="analytics-content">
+      <div className="analytics-content column-reverse">
         <img
           className="analytics-image"
+          src={cb}
           alt="Photo"
           data-aos="fade-right"
           data-aos-delay="400"
           data-aos-duration="800"
+          style={{ maxHeight: "550px" }}
         />
         <div
           className="analytics-text-content"
@@ -62,7 +65,7 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="analytics-content">
+      <div className="analytics-content column-reverse">
         <img
           className="analytics-image"
           src={react}
