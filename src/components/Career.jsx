@@ -11,18 +11,18 @@ export default function Career() {
   }, []);
 
   return (
-    <div className="analytics-container">
+    <div className="section-container">
       <div
-        className="title"
+        className="section-title"
         style={{ color: "#00df9a" }}
         data-aos="zoom-in"
         data-aos-duration="600"
       >
         Berufserfahrung
       </div>
-      <div className="analytics-content column-reverse">
+      <div className="section-group direction-reverse">
         <img
-          className="analytics-image"
+          className="topic-image"
           src={bloola}
           alt="Bloola GmbH"
           data-aos="fade-right"
@@ -30,14 +30,14 @@ export default function Career() {
           data-aos-duration="800"
         />
         <div
-          className="analytics-text-content"
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="analytics-title" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title" style={{ color: "#002E2E" }}>
             QA bei Bloola GmbH
           </h1>
-          <div className="analytics-description" style={{ color: "#002E2E" }}>
+          <div className="topic-description" style={{ color: "#002E2E" }}>
             <p>
               Als QA bei der deutschen Firma Bloola GmbH war ich für die
               Durchführung manueller Tests einer Web-App zuständig. Sowohl die
@@ -47,9 +47,9 @@ export default function Career() {
           </div>
         </div>
       </div>
-      <div className="analytics-content column-reverse">
+      <div className="section-group direction-reverse">
         <img
-          className="analytics-image"
+          className="topic-image"
           src={ccc}
           alt="CCC Call Center"
           data-aos="fade-right"
@@ -57,14 +57,14 @@ export default function Career() {
           data-aos-duration="800"
         />
         <div
-          className="analytics-text-content"
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="analytics-title" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title" style={{ color: "#002E2E" }}>
             Tätigkeit als Call Agent
           </h1>
-          <p className="analytics-description" style={{ color: "#002E2E" }}>
+          <p className="topic-description" style={{ color: "#002E2E" }}>
             Als Call Agent in einem Call Center konnte ich meine Fähigkeiten im
             Bereich Kommunikation, Empathie und Verkauf deutlich ausbauen. Dabei
             war ich für die Betreuung und Beratung deutscher Kunden sowie für

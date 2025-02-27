@@ -11,18 +11,18 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="analytics-container">
+    <div className="section-container">
       <div
-        className="title"
+        className="section-title"
         style={{ color: "#00df9a" }}
         data-aos="zoom-in"
         data-aos-duration="600"
       >
         Über mich
       </div>
-      <div className="analytics-content column-reverse">
+      <div className="section-group direction-reverse">
         <img
-          className="analytics-image"
+          className="topic-image"
           src={cb}
           alt="Photo"
           data-aos="fade-right"
@@ -31,14 +31,14 @@ export default function AboutMe() {
           style={{ maxHeight: "550px" }}
         />
         <div
-          className="analytics-text-content"
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="analytics-title" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title" style={{ color: "#002E2E" }}>
             Ein paar Worte über mich
           </h1>
-          <div className="analytics-description" style={{ color: "#002E2E" }}>
+          <div className="topic-description" style={{ color: "#002E2E" }}>
             <p style={{ textIndent: "40px" }}>
               Ich bin Kenan Ćurevac, ein 27-jähriger Ingenieur mit einem
               Bachelor-Abschluss in Verkehrsingenieurwesen von der Universität
@@ -65,9 +65,9 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="analytics-content column-reverse">
+      <div className="section-group direction-reverse">
         <img
-          className="analytics-image"
+          className="topic-image"
           src={react}
           alt="React"
           data-aos="fade-right"
@@ -75,15 +75,15 @@ export default function AboutMe() {
           data-aos-duration="800"
         />
         <div
-          className="analytics-text-content"
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="analytics-title" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title" style={{ color: "#002E2E" }}>
             Frontend-Kenntnisse
           </h1>
           <p
-            className="analytics-description"
+            className="topic-description"
             style={{ color: "#002E2E", fontSize: "24px" }}
           >
             Javascript, React.js, TypeScript, MaterialUI, GitHub

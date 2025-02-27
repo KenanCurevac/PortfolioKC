@@ -16,27 +16,27 @@ export default function Projects() {
 
   return (
     <div
-      className="analytics-container"
+      className="section-container"
       style={{ backgroundColor: "#001F1F", color: "white" }}
     >
       <div
-        className="title"
+        className="section-title"
         style={{ color: "#00df9a" }}
         data-aos="zoom-in"
         data-aos-duration="600"
       >
         Projekte
       </div>
-      <div className="analytics-content wide-picture-content">
+      <div className="section-group early-direction-reverse">
         <div
-          className="analytics-text-content"
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="analytics-title" style={{ color: "#00df9a" }}>
+          <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Quiz-App
           </h1>
-          <div className="analytics-description">
+          <div className="topic-description">
             <p>
               Quiz-App ist eine interaktive Quiz-Anwendung, die aus 10 Fragen
               mit jeweils vier Antwortmöglichkeiten besteht. Nach Beantwortung
@@ -45,14 +45,14 @@ export default function Projects() {
             <p>Technologien: React, TypeScript, Material UI, The Trivia API</p>
           </div>
           <button
-            className="analytics-button"
+            className="project-button"
             onClick={() => openProject("https://quiz-app-kenan.vercel.app/")}
           >
             Zum Projekt
           </button>
         </div>
         <img
-          className="analytics-image"
+          className="topic-image"
           src={quizapp}
           alt="Quiz-App"
           data-aos="fade-left"
@@ -60,16 +60,16 @@ export default function Projects() {
           data-aos-duration="800"
         />
       </div>
-      <div className="analytics-content wide-picture-content">
+      <div className="section-group early-direction-reverse">
         <div
-          className="analytics-text-content "
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="analytics-title" style={{ color: "#00df9a" }}>
+          <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Film Atlas
           </h1>
-          <div className="analytics-description">
+          <div className="topic-description">
             <p>
               Film Atlas ist eine umfassende Filmdatenbank, die es Nutzern
               ermöglicht, nach Filmen, Fernsehserien und Personen, die in der
@@ -89,14 +89,14 @@ export default function Projects() {
             </p>
           </div>
           <button
-            className="analytics-button"
+            className="project-button"
             onClick={() => openProject("https://movie-db-kenan.vercel.app/")}
           >
             Zum Projekt
           </button>
         </div>
         <img
-          className="analytics-image"
+          className="topic-image"
           src={moviedb}
           alt="Movie Database"
           data-aos="fade-left"

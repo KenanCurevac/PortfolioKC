@@ -104,7 +104,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="analytics-container-contact">
+    <div className="contact-container">
       <Snackbar
         open={snackbarState.open}
         autoHideDuration={3000}
@@ -120,7 +120,7 @@ export default function Contact() {
       </Snackbar>
 
       <div
-        className="title-contact"
+        className="contact-title"
         style={{ color: "#00df9a" }}
         data-aos="zoom-in"
         data-aos-duration="600"
@@ -128,7 +128,7 @@ export default function Contact() {
         Kontakt
       </div>
       <div
-        className="icon-container"
+        className="icons-container"
         data-aos="fade-up"
         data-aos-duration="600"
       >
@@ -143,11 +143,11 @@ export default function Contact() {
         <div className="separator-line"></div>
       </div>
       <div
-        className="inner-content"
+        className="contact-form-container"
         data-aos="fade-up"
         data-aos-duration="1200"
       >
-        <div className="contact-title">
+        <div className="call-to-mail">
           <h1>Schreib mir eine Nachricht!</h1>
           <p>
             Hast du eine Frage oder ein Angebot oder möchtest du einfach <br />
@@ -161,7 +161,7 @@ export default function Contact() {
           ref={formRef}
           onSubmit={sendEmail}
         >
-          <div className="email-inputs">
+          <div className="email-input-container">
             <div className="email-input">
               <InputLabel
                 htmlFor="name"
@@ -248,7 +248,7 @@ export default function Contact() {
           </div>
 
           <button
-            className="sauce-button"
+            className="send-email-button"
             type="submit"
             id="submit-button"
             disabled={

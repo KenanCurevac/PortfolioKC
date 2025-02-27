@@ -13,7 +13,7 @@ export default function Hero(props) {
     <div className="hero-container">
       <Navbar {...props} />
       <div className="hero-content" data-aos="fade-up" data-aos-duration="1200">
-        <p className="hero-subtitle">FRONTEND SOFTWARE ENTWICKLER</p>
+        <p className="hero-pretitle">FRONTEND SOFTWARE ENTWICKLER</p>
         <h1 className="hero-title" data-aos="zoom-in">
           Hallo, ich bin{" "}
           <span

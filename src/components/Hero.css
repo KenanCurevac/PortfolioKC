@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.hero-subtitle {
+.hero-pretitle {
   color: #00df9a;
   font-size: 20px;
   font-weight: bold;
@@ -27,12 +27,6 @@
   padding-bottom: 36px;
 }
 
-.hero-typed-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .hero-description {
   font-size: 28px;
   font-weight: bold;
@@ -40,21 +34,15 @@
   text-indent: 20px;
 }
 
-.hero-typed-text {
-  font-size: 2rem; /* Adjust as needed */
-  font-weight: bold;
-  padding-left: 10px; /* Add padding to the left of typed text */
-}
-
 @media (max-width: 700px) {
+  .hero-pretitle {
+    font-size: 18px;
+  }
+
   .hero-title {
     font-size: 64px;
     padding-top: 6px;
     padding-bottom: 33px;
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
   }
 
   .hero-description {
@@ -63,14 +51,14 @@
 }
 
 @media (max-width: 540px) {
+  .hero-pretitle {
+    font-size: 16px;
+  }
+
   .hero-title {
     font-size: 60px;
     padding-top: 2px;
     padding-bottom: 30px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
   }
 
   .hero-description {

@@ -1,13 +1,29 @@
-.analytics-container-contact {
+.contact-container {
   padding: 50px 20px;
 }
 
-.title-contact {
+.contact-title {
   margin: auto;
   font-size: 65px;
   font-weight: bold;
   width: 100%;
   text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.icon {
+  font-size: 120px !important;
+  color: #002e2e !important;
+}
+
+.icon:hover {
+  color: #00df9a !important;
 }
 
 .separator {
@@ -29,47 +45,15 @@
   margin: auto 10px;
 }
 
-.icon-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 60px;
-}
-
-.icon {
-  font-size: 120px !important;
-  color: #002e2e !important;
-}
-
-.icon:hover {
-  color: #00df9a !important;
-}
-
-.inner-content {
+.contact-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 0px;
-  max-width: 550px;
+  max-width: 650px;
   min-width: 465px;
   width: 100%;
   margin: auto;
-}
-
-.contact-title {
-  width: 100%;
-  text-align: center;
-  color: #002e2e;
-}
-
-.contact-title h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-.contact-title p {
-  font-size: 1.1rem;
 }
 
 .contact-form {
@@ -79,7 +63,13 @@
   width: 100%;
 }
 
-.email-inputs {
+.call-to-mail {
+  width: 100%;
+  text-align: center;
+  color: #002e2e;
+}
+
+.email-input-container {
   display: flex;
   justify-content: space-between;
 }
@@ -88,7 +78,7 @@
   width: 48%;
 }
 
-.sauce-button {
+.send-email-button {
   background-color: #002e2e;
   color: white;
   width: 300px;
@@ -102,20 +92,13 @@
   transition: background-color 0.3s ease;
 }
 
-.sauce-button:hover {
+.send-email-button:hover {
   background-color: #00df9a;
 }
 
-.sauce-button:disabled {
+.send-email-button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-
-.bow-arrow {
-  fill: none;
-  stroke: #4831d4;
-  stroke-width: 2;
-  stroke-miterlimit: 0;
 }
 
 .MuiTextField-root {

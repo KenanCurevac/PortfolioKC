@@ -85,7 +85,7 @@ export default function Navbar({
       data-aos-delay="400"
       data-aos-duration="800"
     >
-      <img src={logo} className="navbar-title" />
+      <img src={logo} className="navbar-logo" />
       <ul className="navbar-links">
         <li className="navbar-item" onClick={() => scrollToSection(aboutRef)}>
           Über mich
