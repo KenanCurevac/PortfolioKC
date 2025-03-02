@@ -1,0 +1,67 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.email-input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-input {
+  width: 48%;
+  color: #002e2e;
+}
+
+.send-email-button {
+  background-color: #002e2e;
+  color: white;
+  width: 300px;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-email-button:hover {
+  background-color: #00df9a;
+}
+
+.send-email-button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.MuiTooltip-tooltip {
+  font-size: 14px !important;
+  padding: 5px 8px !important;
+}
+
+.MuiInputLabel-root {
+  font-size: 20px !important;
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+
+.MuiFormHelperText-root {
+  font-size: 14px !important;
+}
+
+.MuiTextField-root {
+  width: 100%;
+}
+
+.MuiInputBase-root {
+  padding: 0px !important;
+}
+
+.MuiInputBase-input {
+  padding: 15px 15px 10px !important;
+  font-size: 20px !important;
+  color: #002e2e !important;
+}

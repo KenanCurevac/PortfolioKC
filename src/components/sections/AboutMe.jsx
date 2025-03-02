@@ -1,9 +1,9 @@
+import "./Sections.css";
 import { useEffect } from "react";
-import "./Content.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import react from "../assets/react.svg";
-import cb from "../assets/cb.jpg";
+import react from "../../assets/react.svg";
+import cb from "../../assets/cb.jpg";
 
 export default function AboutMe() {
   useEffect(() => {
@@ -11,13 +11,8 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="section-container">
-      <div
-        className="section-title"
-        style={{ color: "#00df9a" }}
-        data-aos="zoom-in"
-        data-aos-duration="600"
-      >
+    <div className="white-bg">
+      <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Über mich
       </div>
       <div className="section-group direction-reverse">
@@ -35,10 +30,8 @@ export default function AboutMe() {
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="topic-title" style={{ color: "#002E2E" }}>
-            Ein paar Worte über mich
-          </h1>
-          <div className="topic-description" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title">Ein paar Worte über mich</h1>
+          <div className="topic-description">
             <p style={{ textIndent: "40px" }}>
               Ich bin Kenan Ćurevac, ein 27-jähriger Ingenieur mit einem
               Bachelor-Abschluss in Verkehrsingenieurwesen von der Universität
@@ -79,13 +72,8 @@ export default function AboutMe() {
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="topic-title" style={{ color: "#002E2E" }}>
-            Frontend-Kenntnisse
-          </h1>
-          <p
-            className="topic-description"
-            style={{ color: "#002E2E", fontSize: "24px" }}
-          >
+          <h1 className="topic-title">Frontend-Kenntnisse</h1>
+          <p className="topic-description" style={{ fontSize: "24px" }}>
             Javascript, React.js, TypeScript, MaterialUI, GitHub
           </p>
         </div>

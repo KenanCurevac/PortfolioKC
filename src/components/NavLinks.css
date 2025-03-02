@@ -1,0 +1,40 @@
+.navbar-links {
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.navbar-item {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.drawer-list .navbar-item {
+  padding: 0px 16px 24px 16px;
+}
+
+.navbar-item:hover {
+  color: #00df9a;
+}
+
+.drawer-list .MuiListItem-root {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.drawer-list .MuiListItem-root:hover {
+  color: #001f1f !important;
+}
+
+.navbar-links .MuiListItem-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 920px) {
+  .navbar-links {
+    display: none;
+  }
+}

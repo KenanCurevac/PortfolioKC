@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import "./Content.css";
+import "./Sections.css";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import goethe from "../assets/goethe.png";
-import university from "../assets/univerzitet.png";
+import goethe from "../../assets/goethe.png";
+import university from "../../assets/univerzitet.png";
 
 export default function Education() {
   useEffect(() => {
@@ -11,16 +11,8 @@ export default function Education() {
   }, []);
 
   return (
-    <div
-      className="section-container"
-      style={{ backgroundColor: "#001F1F", color: "white" }}
-    >
-      <div
-        className="section-title"
-        style={{ color: "#00df9a" }}
-        data-aos="zoom-in"
-        data-aos-duration="600"
-      >
+    <div className="green-bg">
+      <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Bildung
       </div>
       <div className="section-group">
@@ -61,7 +53,7 @@ export default function Education() {
             Zudem spreche ich fließend Englisch (C1-Niveau).
           </p>
         </div>
-        <div className="square-container">
+        <div className="square-image-container">
           <img
             className="square-image"
             src={goethe}

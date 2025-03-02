@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import AboutMe from "./components/AboutMe";
-import Career from "./components/Career";
+import AboutMe from "./components/sections/AboutMe";
+import Career from "./components/sections/Career";
 import Contact from "./components/Contact";
-import Education from "./components/Education";
+import Education from "./components/sections/Education";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
+import Projects from "./components/sections/Projects";
 
 function App() {
   const aboutRef = useRef(null);

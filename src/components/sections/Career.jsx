@@ -1,9 +1,9 @@
+import "./Sections.css";
 import { useEffect } from "react";
-import "./Content.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import bloola from "../assets/bloola.png";
-import ccc from "../assets/ccc.jpg";
+import bloola from "../../assets/bloola.png";
+import ccc from "../../assets/ccc.jpg";
 
 export default function Career() {
   useEffect(() => {
@@ -11,13 +11,8 @@ export default function Career() {
   }, []);
 
   return (
-    <div className="section-container">
-      <div
-        className="section-title"
-        style={{ color: "#00df9a" }}
-        data-aos="zoom-in"
-        data-aos-duration="600"
-      >
+    <div className="white-bg">
+      <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Berufserfahrung
       </div>
       <div className="section-group direction-reverse">
@@ -34,10 +29,8 @@ export default function Career() {
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="topic-title" style={{ color: "#002E2E" }}>
-            QA bei Bloola GmbH
-          </h1>
-          <div className="topic-description" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title">QA bei Bloola GmbH</h1>
+          <div className="topic-description">
             <p>
               Als QA bei der deutschen Firma Bloola GmbH war ich für die
               Durchführung manueller Tests einer Web-App zuständig. Sowohl die
@@ -61,10 +54,8 @@ export default function Career() {
           data-aos="zoom-in"
           data-aos-duration="1200"
         >
-          <h1 className="topic-title" style={{ color: "#002E2E" }}>
-            Tätigkeit als Call Agent
-          </h1>
-          <p className="topic-description" style={{ color: "#002E2E" }}>
+          <h1 className="topic-title">Tätigkeit als Call Agent</h1>
+          <p className="topic-description">
             Als Call Agent in einem Call Center konnte ich meine Fähigkeiten im
             Bereich Kommunikation, Empathie und Verkauf deutlich ausbauen. Dabei
             war ich für die Betreuung und Beratung deutscher Kunden sowie für
