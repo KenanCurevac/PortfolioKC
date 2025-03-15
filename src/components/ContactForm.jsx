@@ -1,10 +1,8 @@
 import "./ContactForm.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
-import Tooltip from "@mui/material/Tooltip";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function ContactForm({ onOpenSnackbar }) {
@@ -26,13 +24,9 @@ export default function ContactForm({ onOpenSnackbar }) {
 
   const formRef = useRef();
 
-  const disabledButton =
+  const isButtonDisabled =
     Object.values(warning).includes(true) ||
     Object.values(formData).some((value) => value.trim() === "");
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   function handleForm(event) {
     setFormData((prevFormData) => ({
@@ -111,6 +105,7 @@ export default function ContactForm({ onOpenSnackbar }) {
             error={warning.user_name && touched.user_name}
             onBlur={handleBlur}
             color="success"
+            title="Bitte geben Sie Ihren Namen ein"
           />
         </div>
         <div className="email-input">
@@ -131,6 +126,7 @@ export default function ContactForm({ onOpenSnackbar }) {
             error={warning.user_email && touched.user_email}
             onBlur={handleBlur}
             color="success"
+            title="Bitte geben Sie eine gültige E-Mail-Adresse ein"
           />
         </div>
       </div>
@@ -154,24 +150,19 @@ export default function ContactForm({ onOpenSnackbar }) {
           error={warning.message && touched.message}
           onBlur={handleBlur}
           color="success"
+          title="Bitte schreiben Sie eine Nachricht"
         />
       </div>
-      <Tooltip
-        title="Bitte füllen Sie alle Felder aus."
-        followCursor
-        disableHoverListener={!disabledButton}
-      >
-        <div style={{ margin: "auto" }}>
-          <button
-            className="send-email-button"
-            type="submit"
-            id="submit-button"
-            disabled={disabledButton}
-          >
-            Senden
-          </button>
-        </div>
-      </Tooltip>
+      <div style={{ margin: "auto" }}>
+        <button
+          className="send-email-button"
+          type="submit"
+          id="submit-button"
+          disabled={isButtonDisabled}
+        >
+          Senden
+        </button>
+      </div>
     </form>
   );
 }

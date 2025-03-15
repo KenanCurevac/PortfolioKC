@@ -1,7 +1,6 @@
 import "./Navbar.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "../assets/port-logo-org.png";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -15,10 +14,6 @@ export default function Navbar(props) {
   function toggleDrawer(newOpen) {
     setOpenDrawer(newOpen);
   }
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <div
