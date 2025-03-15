@@ -1,17 +1,12 @@
 import "./Sections.css";
-import { useEffect } from "react";
-import AOS from "aos";
+import { forwardRef } from "react";
 import "aos/dist/aos.css";
 import react from "../../assets/react.svg";
 import cb from "../../assets/cb.jpg";
 
-export default function AboutMe() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+export default forwardRef(function AboutMe(_, ref) {
   return (
-    <div className="white-bg">
+    <div className="white-bg" ref={ref}>
       <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Über mich
       </div>
@@ -80,4 +75,4 @@ export default function AboutMe() {
       </div>
     </div>
   );
-}
+});

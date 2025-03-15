@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import AboutMe from "./components/sections/AboutMe";
 import Career from "./components/sections/Career";
 import Contact from "./components/Contact";
 import Education from "./components/sections/Education";
 import Hero from "./components/Hero";
 import Projects from "./components/sections/Projects";
+import AOS from "aos";
 
 function App() {
   const aboutRef = useRef(null);
@@ -14,34 +15,28 @@ function App() {
   const contactRef = useRef(null);
 
   function scrollToSection(ref) {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    ref.current.scrollIntoView({ behavior: "smooth" });
   }
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
     <div>
       <Hero
         scrollToSection={scrollToSection}
-        aboutRef={aboutRef}
-        educationRef={educationRef}
-        careerRef={careerRef}
-        projectsRef={projectsRef}
-        contactRef={contactRef}
+        aboutSection={aboutRef}
+        educationSection={educationRef}
+        careerSection={careerRef}
+        projectsSection={projectsRef}
+        contactSection={contactRef}
       />
-      <div ref={aboutRef}>
-        <AboutMe />
-      </div>
-      <div ref={educationRef}>
-        <Education />
-      </div>
-      <div ref={careerRef}>
-        <Career />
-      </div>
-      <div ref={projectsRef}>
-        <Projects />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>
+      <AboutMe ref={aboutRef} />
+      <Education ref={educationRef} />
+      <Career ref={careerRef} />
+      <Projects ref={projectsRef} />
+      <Contact ref={contactRef} />
     </div>
   );
 }

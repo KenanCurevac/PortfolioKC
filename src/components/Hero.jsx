@@ -1,14 +1,8 @@
 import "./Hero.css";
-import { useEffect } from "react";
 import Navbar from "./Navbar";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Hero(props) {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <div className="hero-container">
       <Navbar {...props} />

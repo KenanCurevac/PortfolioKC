@@ -1,17 +1,12 @@
 import "./Sections.css";
-import { useEffect } from "react";
-import AOS from "aos";
+import { forwardRef } from "react";
 import "aos/dist/aos.css";
 import bloola from "../../assets/bloola.png";
 import ccc from "../../assets/ccc.jpg";
 
-export default function Career() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+export default forwardRef(function Career(_, ref) {
   return (
-    <div className="white-bg">
+    <div className="white-bg" ref={ref}>
       <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Berufserfahrung
       </div>
@@ -66,4 +61,4 @@ export default function Career() {
       </div>
     </div>
   );
-}
+});

@@ -1,23 +1,18 @@
 import "./Contact.css";
-import { useEffect, useState } from "react";
+import { forwardRef, useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "./ContactForm";
 
-export default function Contact() {
+export default forwardRef(function Contact(_, ref) {
   const [snackbarState, setSnackbarState] = useState({
     open: false,
     message: "",
     severity: "",
   });
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   function handleOpenSnackbar(message, severity) {
     setSnackbarState({ open: true, message: message, severity: severity });
@@ -35,7 +30,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" ref={ref}>
       <Snackbar
         open={snackbarState.open}
         autoHideDuration={3000}
@@ -84,4 +79,4 @@ export default function Contact() {
       </div>
     </div>
   );
-}
+});

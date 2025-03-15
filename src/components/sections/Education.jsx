@@ -1,17 +1,12 @@
 import "./Sections.css";
-import { useEffect } from "react";
-import AOS from "aos";
+import { forwardRef } from "react";
 import "aos/dist/aos.css";
 import goethe from "../../assets/goethe.png";
 import university from "../../assets/univerzitet.png";
 
-export default function Education() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+export default forwardRef(function Education(_, ref) {
   return (
-    <div className="green-bg">
+    <div className="green-bg" ref={ref}>
       <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Bildung
       </div>
@@ -66,4 +61,4 @@ export default function Education() {
       </div>
     </div>
   );
-}
+});

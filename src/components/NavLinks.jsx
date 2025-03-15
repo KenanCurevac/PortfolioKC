@@ -4,11 +4,11 @@ import ListItem from "@mui/material/ListItem";
 
 export default function NavLinks({
   scrollToSection,
-  aboutRef,
-  educationRef,
-  careerRef,
-  projectsRef,
-  contactRef,
+  aboutSection,
+  educationSection,
+  careerSection,
+  projectsSection,
+  contactSection,
   onToggleDrawer,
   className,
 }) {
@@ -17,7 +17,7 @@ export default function NavLinks({
       <ListItem
         className="navbar-item"
         onClick={() => {
-          scrollToSection(aboutRef);
+          scrollToSection(aboutSection);
           {
             className === "drawer-list" && onToggleDrawer(false);
           }
@@ -28,7 +28,7 @@ export default function NavLinks({
       <ListItem
         className="navbar-item"
         onClick={() => {
-          scrollToSection(educationRef);
+          scrollToSection(educationSection);
           {
             className === "drawer-list" && onToggleDrawer(false);
           }
@@ -39,7 +39,7 @@ export default function NavLinks({
       <ListItem
         className="navbar-item"
         onClick={() => {
-          scrollToSection(careerRef);
+          scrollToSection(careerSection);
           {
             className === "drawer-list" && onToggleDrawer(false);
           }
@@ -50,7 +50,7 @@ export default function NavLinks({
       <ListItem
         className="navbar-item"
         onClick={() => {
-          scrollToSection(projectsRef);
+          scrollToSection(projectsSection);
           {
             className === "drawer-list" && onToggleDrawer(false);
           }
@@ -61,7 +61,7 @@ export default function NavLinks({
       <ListItem
         className="navbar-item"
         onClick={() => {
-          scrollToSection(contactRef);
+          scrollToSection(contactSection);
           {
             className === "drawer-list" && onToggleDrawer(false);
           }

@@ -1,21 +1,16 @@
 import "./Sections.css";
-import { useEffect } from "react";
-import AOS from "aos";
+import { forwardRef } from "react";
 import "aos/dist/aos.css";
 import quizapp from "../../assets/quizapp.png";
 import moviedb from "../../assets/moviedb.png";
 
-export default function Projects() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+export default forwardRef(function Projects(_, ref) {
   function openProject(url) {
     window.open(url, "_blank");
   }
 
   return (
-    <div className="green-bg">
+    <div className="green-bg" ref={ref}>
       <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
         Projekte
       </div>
@@ -98,4 +93,4 @@ export default function Projects() {
       </div>
     </div>
   );
-}
+});
