@@ -2,7 +2,7 @@ import "./Sections.css";
 import { forwardRef } from "react";
 import "aos/dist/aos.css";
 import react from "../../assets/react.svg";
-import cb from "../../assets/cb.jpg";
+import cvPicture from "../../assets/cv-picture.png";
 
 export default forwardRef(function AboutMe(_, ref) {
   return (
@@ -13,7 +13,7 @@ export default forwardRef(function AboutMe(_, ref) {
       <div className="section-group direction-reverse">
         <img
           className="topic-image"
-          src={cb}
+          src={cvPicture}
           alt="Photo"
           data-aos="fade-right"
           data-aos-delay="400"

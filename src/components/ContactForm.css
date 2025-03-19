@@ -65,3 +65,9 @@
     width: 92vw;
   }
 }
+
+@media (max-width: 400px) {
+  .send-email-button {
+    width: 75vw;
+  }
+}

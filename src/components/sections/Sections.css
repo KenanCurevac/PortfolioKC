@@ -186,3 +186,9 @@
     font-size: 35px;
   }
 }
+
+@media (max-width: 300px) {
+  .long-title {
+    font-size: 30px;
+  }
+}
