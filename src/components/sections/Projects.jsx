@@ -23,14 +23,14 @@ export default forwardRef(function Projects(_, ref) {
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Quiz-App
           </h1>
-          <div className="topic-description">
-            <p>
-              Quiz-App ist eine interaktive Quiz-Anwendung, die aus 10 Fragen
-              mit jeweils vier Antwortmöglichkeiten besteht. Nach Beantwortung
-              aller Fragen erhält der Nutzer eine Auswertung seiner Antworten.
-            </p>
-            <p>Technologien: React, TypeScript, Material UI, The Trivia API</p>
-          </div>
+          <p className="topic-description">
+            Quiz-App ist eine interaktive Quiz-Anwendung, die aus 10 Fragen mit
+            jeweils vier Antwortmöglichkeiten besteht. Nach Beantwortung aller
+            Fragen erhält der Nutzer eine Auswertung seiner Antworten.
+          </p>
+          <p className="topic-description">
+            Technologien: React, TypeScript, Material UI, The Trivia API
+          </p>
           <button
             className="project-button"
             onClick={() => openProject("https://quiz-app-kenan.vercel.app/")}
@@ -56,25 +56,22 @@ export default forwardRef(function Projects(_, ref) {
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Film Atlas
           </h1>
-          <div className="topic-description">
-            <p>
-              Film Atlas ist eine umfassende Filmdatenbank, die es Nutzern
-              ermöglicht, nach Filmen, Fernsehserien und Personen, die in der
-              Film- und Fernsehbranche tätig sind, zu suchen und Informationen
-              über diese zu erhalten.
-            </p>
-            <p>
-              Die Datenbank listet nicht nur aktuelle Kinofilme und beliebte
-              Serien auf, sondern bietet auch einen Ausblick auf kommende Filme
-              (mit Trailern) und Serien sowie eine Übersicht der aktuell im TV
-              laufenden Serien. Abgerundet wird das Angebot durch Top-Listen der
-              am besten bewerteten Produktionen.
-            </p>
-            <p>
-              Technologien: React, TypeScript, Material UI, The Movie Database
-              API
-            </p>
-          </div>
+          <p className="topic-description">
+            Film Atlas ist eine umfassende Filmdatenbank, die es Nutzern
+            ermöglicht, nach Filmen, Fernsehserien und Personen, die in der
+            Film- und Fernsehbranche tätig sind, zu suchen und Informationen
+            über diese zu erhalten.
+          </p>
+          <p className="topic-description">
+            Die Datenbank listet nicht nur aktuelle Kinofilme und beliebte
+            Serien auf, sondern bietet auch einen Ausblick auf kommende Filme
+            (mit Trailern) und Serien sowie eine Übersicht der aktuell im TV
+            laufenden Serien. Abgerundet wird das Angebot durch Top-Listen der
+            am besten bewerteten Produktionen.
+          </p>
+          <p className="topic-description">
+            Technologien: React, TypeScript, Material UI, The Movie Database API
+          </p>
           <button
             className="project-button"
             onClick={() => openProject("https://movie-db-kenan.vercel.app/")}

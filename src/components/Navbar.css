@@ -9,7 +9,6 @@
 }
 
 .navbar-logo {
-  size: 14px;
   width: 240px;
   height: auto;
 }
@@ -54,5 +53,47 @@
 @media (max-width: 920px) {
   .mobile-menu {
     display: block !important;
+  }
+}
+
+@media (max-width: 810px) {
+  .navbar-logo {
+    width: 220px;
+  }
+}
+
+@media (max-width: 630px) {
+  .navbar-logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar-logo {
+    width: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-close-button .MuiSvgIcon-root {
+    font-size: 56px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-close-button .MuiSvgIcon-root {
+    font-size: 52px !important;
+  }
+}
+
+@media (max-width: 410px) {
+  .navbar-logo {
+    width: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-close-button .MuiSvgIcon-root {
+    font-size: 48px !important;
   }
 }

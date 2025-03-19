@@ -53,7 +53,12 @@ export default forwardRef(function Contact(_, ref) {
         data-aos="fade-up"
         data-aos-duration="600"
       >
-        <LinkedInIcon className="icon" />
+        <a
+          href="https://www.linkedin.com/in/kenan-curevac-2624a4357/"
+          target="_blank"
+        >
+          <LinkedInIcon className="icon" />
+        </a>
         <a href="https://github.com/KenanCurevac" target="_blank">
           <GitHubIcon className="icon" />
         </a>

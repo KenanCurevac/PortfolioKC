@@ -36,7 +36,7 @@ export default forwardRef(function Education(_, ref) {
       </div>
       <div className="section-group">
         <div
-          className="topic-content"
+          className="topic-container"
           data-aos="zoom-in"
           data-aos-duration="1200"
         >

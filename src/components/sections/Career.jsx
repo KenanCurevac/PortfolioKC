@@ -7,7 +7,11 @@ import ccc from "../../assets/ccc.jpg";
 export default forwardRef(function Career(_, ref) {
   return (
     <div className="white-bg" ref={ref}>
-      <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
+      <div
+        className="section-title long-title"
+        data-aos="zoom-in"
+        data-aos-duration="600"
+      >
         Berufserfahrung
       </div>
       <div className="section-group direction-reverse">
@@ -25,14 +29,12 @@ export default forwardRef(function Career(_, ref) {
           data-aos-duration="1200"
         >
           <h1 className="topic-title">QA bei Bloola GmbH</h1>
-          <div className="topic-description">
-            <p>
-              Als QA bei der deutschen Firma Bloola GmbH war ich für die
-              Durchführung manueller Tests einer Web-App zuständig. Sowohl die
-              Kommunikation mit internationalen Kollegen als auch die
-              Testdokumentation erfolgten auf Englisch.
-            </p>
-          </div>
+          <p className="topic-description">
+            Als QA bei der deutschen Firma Bloola GmbH war ich für die
+            Durchführung manueller Tests einer Web-App zuständig. Sowohl die
+            Kommunikation mit internationalen Kollegen als auch die
+            Testdokumentation erfolgten auf Englisch.
+          </p>
         </div>
       </div>
       <div className="section-group direction-reverse">
