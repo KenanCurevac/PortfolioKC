@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
-import "aos/dist/aos.css";
 
 export default function ContactForm({ onOpenSnackbar }) {
   const [formData, setFormData] = useState({

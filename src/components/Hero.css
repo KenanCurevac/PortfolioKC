@@ -1,7 +1,7 @@
 .hero-container {
   background: url("../assets/portfolio-hero-bg.jpg") center no-repeat;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 40px 40px 0px;
@@ -12,6 +12,10 @@
   width: 100%;
   margin: 25px auto;
   text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .hero-pretitle {

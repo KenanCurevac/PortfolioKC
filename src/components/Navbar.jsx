@@ -1,7 +1,6 @@
 import "./Navbar.css";
 import { useState } from "react";
 import logo from "../assets/port-logo-org.png";
-import "aos/dist/aos.css";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -16,12 +15,7 @@ export default function Navbar(props) {
   }
 
   return (
-    <div
-      className="navbar"
-      data-aos="fade-down"
-      data-aos-delay="400"
-      data-aos-duration="800"
-    >
+    <div className="navbar">
       <img src={logo} className="navbar-logo" />
       <NavLinks {...props} className="navbar-links" />
       <Button onClick={() => toggleDrawer(true)} className="mobile-menu">

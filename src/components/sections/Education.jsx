@@ -1,21 +1,14 @@
 import "./Sections.css";
 import { forwardRef } from "react";
-import "aos/dist/aos.css";
 import goethe from "../../assets/goethe.png";
 import university from "../../assets/univerzitet.png";
 
 export default forwardRef(function Education(_, ref) {
   return (
     <div className="green-bg" ref={ref}>
-      <div className="section-title" data-aos="zoom-in" data-aos-duration="600">
-        Bildung
-      </div>
+      <div className="section-title">Bildung</div>
       <div className="section-group">
-        <div
-          className="topic-container"
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-        >
+        <div className="topic-container">
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Studium
           </h1>
@@ -29,17 +22,10 @@ export default forwardRef(function Education(_, ref) {
           className="topic-image"
           src={university}
           alt="University of Sarajevo"
-          data-aos="fade-left"
-          data-aos-delay="400"
-          data-aos-duration="800"
         />
       </div>
       <div className="section-group">
-        <div
-          className="topic-container"
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-        >
+        <div className="topic-container">
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Sprachen
           </h1>
@@ -49,14 +35,7 @@ export default forwardRef(function Education(_, ref) {
           </p>
         </div>
         <div className="square-image-container">
-          <img
-            className="square-image"
-            src={goethe}
-            alt="Goethe-Institut"
-            data-aos="fade-left"
-            data-aos-delay="400"
-            data-aos-duration="800"
-          />
+          <img className="square-image" src={goethe} alt="Goethe-Institut" />
         </div>
       </div>
     </div>

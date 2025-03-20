@@ -1,14 +1,13 @@
 import "./Hero.css";
 import Navbar from "./Navbar";
-import "aos/dist/aos.css";
 
 export default function Hero(props) {
   return (
     <div className="hero-container">
       <Navbar {...props} />
-      <div className="hero-content" data-aos="fade-up" data-aos-duration="1200">
+      <div className="hero-content">
         <p className="hero-pretitle">FRONTEND SOFTWARE ENTWICKLER</p>
-        <h1 className="hero-title" data-aos="zoom-in">
+        <h1 className="hero-title">
           Hallo, ich bin{" "}
           <span
             style={{
@@ -21,7 +20,7 @@ export default function Hero(props) {
         <p className="hero-description">
           Mit Leidenschaft für Frontend-Entwicklung, entwickle ich
           benutzerfreundliche Anwendungen und freue mich auf die Zusammenarbeit
-          mit einem motivierten Team. lelelelel
+          mit einem motivierten Team.
         </p>
       </div>
     </div>
