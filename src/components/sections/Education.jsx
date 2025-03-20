@@ -30,7 +30,7 @@ export default forwardRef(function Education(_, ref) {
           src={university}
           alt="University of Sarajevo"
           data-aos="fade-left"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
       </div>
@@ -54,7 +54,7 @@ export default forwardRef(function Education(_, ref) {
             src={goethe}
             alt="Goethe-Institut"
             data-aos="fade-left"
-            data-aos-delay="600"
+            data-aos-delay="400"
             data-aos-duration="800"
           />
         </div>

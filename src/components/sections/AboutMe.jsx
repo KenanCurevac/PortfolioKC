@@ -17,7 +17,7 @@ export default forwardRef(function AboutMe(_, ref) {
           alt="Photo"
           style={{ maxHeight: "550px" }}
           data-aos="fade-right"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
         <div
@@ -59,7 +59,7 @@ export default forwardRef(function AboutMe(_, ref) {
           src={react}
           alt="React"
           data-aos="fade-right"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
         <div

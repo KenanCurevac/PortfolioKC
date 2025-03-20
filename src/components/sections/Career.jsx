@@ -16,7 +16,7 @@ export default forwardRef(function Career(_, ref) {
           src={bloola}
           alt="Bloola GmbH"
           data-aos="fade-right"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
         <div
@@ -39,7 +39,7 @@ export default forwardRef(function Career(_, ref) {
           src={ccc}
           alt="CCC Call Center"
           data-aos="fade-right"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
         <div

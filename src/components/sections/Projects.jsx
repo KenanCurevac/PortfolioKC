@@ -43,7 +43,7 @@ export default forwardRef(function Projects(_, ref) {
           src={quizapp}
           alt="Quiz-App"
           data-aos="fade-left"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
       </div>
@@ -84,7 +84,7 @@ export default forwardRef(function Projects(_, ref) {
           src={moviedb}
           alt="Movie Database"
           data-aos="fade-left"
-          data-aos-delay="600"
+          data-aos-delay="400"
           data-aos-duration="800"
         />
       </div>

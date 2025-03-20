@@ -45,10 +45,14 @@ export default forwardRef(function Contact(_, ref) {
         </Alert>
       </Snackbar>
 
-      <div className="contact-title" data-aos="zoom-in">
+      <div className="contact-title" data-aos="zoom-in" data-aos-duration="600">
         Kontakt
       </div>
-      <div className="icons-container" data-aos="zoom-in-down">
+      <div
+        className="icons-container"
+        data-aos="zoom-in-down"
+        data-aos-duration="800"
+      >
         <a
           href="https://www.linkedin.com/in/kenan-curevac-2624a4357/"
           target="_blank"
@@ -59,7 +63,11 @@ export default forwardRef(function Contact(_, ref) {
           <GitHubIcon className="icon" />
         </a>
       </div>
-      <div className="separator" data-aos="zoom-in-down">
+      <div
+        className="separator"
+        data-aos="zoom-in-down"
+        data-aos-duration="800"
+      >
         <div className="separator-line"></div>
         <div className="separator-or">oder</div>
         <div className="separator-line"></div>
