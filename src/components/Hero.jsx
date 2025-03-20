@@ -25,7 +25,7 @@ export default function Hero(props) {
         <p className="hero-description" data-aos="fade-up">
           Mit Leidenschaft für Frontend-Entwicklung, entwickle ich
           benutzerfreundliche Anwendungen und freue mich auf die Zusammenarbeit
-          mit einem motivierten Team. lelelelel
+          mit einem motivierten Team.
         </p>
       </div>
     </div>
