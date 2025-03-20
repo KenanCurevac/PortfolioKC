@@ -2,6 +2,7 @@ import "./Sections.css";
 import { forwardRef } from "react";
 import quizapp from "../../assets/quizapp.png";
 import moviedb from "../../assets/moviedb.png";
+import "aos/dist/aos.css";
 
 export default forwardRef(function Projects(_, ref) {
   function openProject(url) {
@@ -10,9 +11,15 @@ export default forwardRef(function Projects(_, ref) {
 
   return (
     <div className="green-bg" ref={ref}>
-      <div className="section-title">Projekte</div>
+      <div className="section-title" data-aos="zoom-in">
+        Projekte
+      </div>
       <div className="section-group early-direction-reverse">
-        <div className="topic-container">
+        <div
+          className="topic-container"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Quiz-App
           </h1>
@@ -31,10 +38,21 @@ export default forwardRef(function Projects(_, ref) {
             Zum Projekt
           </button>
         </div>
-        <img className="topic-image" src={quizapp} alt="Quiz-App" />
+        <img
+          className="topic-image"
+          src={quizapp}
+          alt="Quiz-App"
+          data-aos="fade-left"
+          data-aos-delay="600"
+          data-aos-duration="800"
+        />
       </div>
       <div className="section-group early-direction-reverse">
-        <div className="topic-container">
+        <div
+          className="topic-container"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
             Film Atlas
           </h1>
@@ -61,7 +79,14 @@ export default forwardRef(function Projects(_, ref) {
             Zum Projekt
           </button>
         </div>
-        <img className="topic-image" src={moviedb} alt="Movie Database" />
+        <img
+          className="topic-image"
+          src={moviedb}
+          alt="Movie Database"
+          data-aos="fade-left"
+          data-aos-delay="600"
+          data-aos-duration="800"
+        />
       </div>
     </div>
   );

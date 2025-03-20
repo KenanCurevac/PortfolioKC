@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import AboutMe from "./components/sections/AboutMe";
 import Career from "./components/sections/Career";
 import Contact from "./components/Contact";
 import Education from "./components/sections/Education";
 import Hero from "./components/Hero";
 import Projects from "./components/sections/Projects";
+import AOS from "aos";
 
 function App() {
   const aboutRef = useRef(null);
@@ -16,6 +17,13 @@ function App() {
   function scrollToSection(ref) {
     ref.current.scrollIntoView({ behavior: "smooth" });
   }
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div>

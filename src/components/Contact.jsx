@@ -5,6 +5,7 @@ import Alert from "@mui/material/Alert";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "./ContactForm";
+import "aos/dist/aos.css";
 
 export default forwardRef(function Contact(_, ref) {
   const [snackbarState, setSnackbarState] = useState({
@@ -44,8 +45,10 @@ export default forwardRef(function Contact(_, ref) {
         </Alert>
       </Snackbar>
 
-      <div className="contact-title">Kontakt</div>
-      <div className="icons-container">
+      <div className="contact-title" data-aos="zoom-in">
+        Kontakt
+      </div>
+      <div className="icons-container" data-aos="zoom-in-down">
         <a
           href="https://www.linkedin.com/in/kenan-curevac-2624a4357/"
           target="_blank"
@@ -56,12 +59,12 @@ export default forwardRef(function Contact(_, ref) {
           <GitHubIcon className="icon" />
         </a>
       </div>
-      <div className="separator">
+      <div className="separator" data-aos="zoom-in-down">
         <div className="separator-line"></div>
         <div className="separator-or">oder</div>
         <div className="separator-line"></div>
       </div>
-      <div className="contact-form-container">
+      <div className="contact-form-container" data-aos="zoom-in-down">
         <div className="call-to-mail">
           <h1>Schreib mir eine Nachricht!</h1>
           <p>

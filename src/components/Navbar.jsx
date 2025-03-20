@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
+import "aos/dist/aos.css";
 
 export default function Navbar(props) {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar(props) {
   }
 
   return (
-    <div className="navbar">
+    <div className="navbar" data-aos="fade-down" data-aos-delay="200">
       <img src={logo} className="navbar-logo" />
       <NavLinks {...props} className="navbar-links" />
       <Button onClick={() => toggleDrawer(true)} className="mobile-menu">
