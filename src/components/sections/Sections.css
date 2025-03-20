@@ -12,6 +12,15 @@
   padding: 50px 20px;
 }
 
+/*
+document.querySelectorAll('*').forEach((el) => {
+  const rect = el.getBoundingClientRect();
+  if (rect.right > window.innerWidth) {
+    console.log(el);
+  }
+});
+*/
+
 .section-title {
   margin: 0px auto;
   font-size: 65px;

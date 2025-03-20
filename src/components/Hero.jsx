@@ -21,7 +21,7 @@ export default function Hero(props) {
         <p className="hero-description">
           Mit Leidenschaft für Frontend-Entwicklung, entwickle ich
           benutzerfreundliche Anwendungen und freue mich auf die Zusammenarbeit
-          mit einem motivierten Team.
+          mit einem motivierten Team. lelelelel
         </p>
       </div>
     </div>
