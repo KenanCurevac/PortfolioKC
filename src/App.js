@@ -6,6 +6,7 @@ import Education from "./components/sections/Education";
 import Hero from "./components/Hero";
 import Projects from "./components/sections/Projects";
 import AOS from "aos";
+import "./i18n";
 
 function App() {
   const aboutRef = useRef(null);
