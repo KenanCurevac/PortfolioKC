@@ -1,18 +1,21 @@
 import "./Hero.css";
 import Navbar from "./Navbar";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 export default function Hero(props) {
+  const { t } = useTranslation();
+
   return (
     <div className="hero-container">
       <Navbar {...props} />
       <div className="hero-content">
         <div className="upper-group">
           <p className="hero-pretitle" data-aos="fade-up">
-            FRONTEND SOFTWARE ENTWICKLER
+            {t("hero.subtitle")}
           </p>
           <h1 className="hero-title" data-aos="zoom-in" data-aos-duration="600">
-            Hallo, ich bin{" "}
+            {t("hero.title")}{" "}
             <span
               style={{
                 color: "#00df9a",
@@ -23,9 +26,7 @@ export default function Hero(props) {
           </h1>
         </div>
         <p className="hero-description" data-aos="fade-up">
-          Mit Leidenschaft für Frontend-Entwicklung, entwickle ich
-          benutzerfreundliche Anwendungen und freue mich auf die Zusammenarbeit
-          mit einem motivierten Team.
+          {t("hero.paragraph")}
         </p>
       </div>
     </div>

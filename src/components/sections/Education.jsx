@@ -3,12 +3,15 @@ import { forwardRef } from "react";
 import goethe from "../../assets/goethe.png";
 import university from "../../assets/univerzitet.png";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 export default forwardRef(function Education(_, ref) {
+  const { t } = useTranslation();
+
   return (
     <div className="green-bg" ref={ref}>
       <div className="section-title" data-aos="zoom-in">
-        Bildung
+        {t("education.title")}
       </div>
       <div className="section-group">
         <div
@@ -17,12 +20,10 @@ export default forwardRef(function Education(_, ref) {
           data-aos-delay="200"
         >
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
-            Studium
+            {t("education.section1.subtitle")}
           </h1>
           <p className="topic-description">
-            Ich habe einen Bachelor-Abschluss in Verkehrsingenieurwesen von der
-            Universität in Sarajevo, Bosnien-Herzegowina, mit dem Schwerpunkt
-            Straßenverkehr.
+            {t("education.section1.paragraph")}
           </p>
         </div>
         <img
@@ -41,11 +42,10 @@ export default forwardRef(function Education(_, ref) {
           data-aos-delay="200"
         >
           <h1 className="topic-title" style={{ color: "#00df9a" }}>
-            Sprachen
+            {t("education.section2.subtitle")}
           </h1>
           <p className="topic-description">
-            Ich verfüge über ein C1-Zertifikat des Goethe-Instituts für Deutsch.
-            Zudem spreche ich fließend Englisch (C1-Niveau).
+            {t("education.section2.paragraph")}
           </p>
         </div>
         <div className="square-image-container">

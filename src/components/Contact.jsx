@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "./ContactForm";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 export default forwardRef(function Contact(_, ref) {
   const [snackbarState, setSnackbarState] = useState({
@@ -13,6 +14,7 @@ export default forwardRef(function Contact(_, ref) {
     message: "",
     severity: "",
   });
+  const { t } = useTranslation();
 
   function handleOpenSnackbar(message, severity) {
     setSnackbarState({ open: true, message: message, severity: severity });
@@ -46,7 +48,7 @@ export default forwardRef(function Contact(_, ref) {
       </Snackbar>
 
       <div className="contact-title" data-aos="zoom-in" data-aos-duration="600">
-        Kontakt
+        {t("contact.title")}
       </div>
       <div
         className="icons-container"
@@ -69,15 +71,15 @@ export default forwardRef(function Contact(_, ref) {
         data-aos-duration="800"
       >
         <div className="separator-line"></div>
-        <div className="separator-or">oder</div>
+        <div className="separator-or">{t("contact.or")}</div>
         <div className="separator-line"></div>
       </div>
       <div className="contact-form-container" data-aos="zoom-in-down">
         <div className="call-to-mail">
-          <h1>Schreib mir eine Nachricht!</h1>
+          <h1>{t("contact.subtitle")}</h1>
           <p>
-            Hast du eine Frage oder ein Angebot oder möchtest du einfach <br />
-            Hallo sagen?
+            {t("contact.paragraphStart")} <br />
+            {t("contact.paragraphEnd")}
           </p>
         </div>
         <ContactForm onOpenSnackbar={handleOpenSnackbar} />

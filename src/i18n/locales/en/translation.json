@@ -13,61 +13,47 @@
   },
   "about": {
     "title": "About Me",
-    "sections": [
-      {
-        "subtitle": "A few words about me",
-        "paragraph": [
-          "I am Kenan Ćurevac, a 27-year-old engineer with a Bachelor's degree in Traffic Engineering from the University of Sarajevo, where I also live. The German language and culture have been part of my life since childhood, which is reflected in my fluent German skills - I grew up watching German television!",
-          "I gained one and a half years of experience in the field of quality assurance (QA). This time helped me develop a strong understanding of reliability and teamwork. I also have a strong affinity for mathematics. Even in school, I took part in math competitions and discovered my enjoyment of analytical thinking.",
-          "I place great importance on detail-oriented work and consider myself a solution-oriented team player. I am motivated to continuously develop myself and to keep learning and growing throughout my professional life. Let's get to know each other - feel free to take a look at my projects. I look forward to hearing from you!"
-        ]
-      },
-      { "subtitle": "Frontend skills" }
-    ]
+    "section1": {
+      "subtitle": "A Few Words About Me",
+      "paragraph1": "I am Kenan Ćurevac, a 27-year-old engineer with a Bachelor's degree in Traffic Engineering from the University of Sarajevo, where I also live. The German language and culture have been part of my life since childhood, which is reflected in my fluent German skills - I grew up watching German television!",
+      "paragraph2": "I gained one and a half years of experience in the field of quality assurance (QA). This time helped me develop a strong understanding of reliability and teamwork. I also have a strong affinity for mathematics. Even in school, I took part in math competitions and discovered my enjoyment of analytical thinking.",
+      "paragraph3": "I place great importance on detail-oriented work and consider myself a solution-oriented team player. I am motivated to continuously develop myself and to keep learning and growing throughout my professional life. Let's get to know each other - feel free to take a look at my projects. I look forward to hearing from you!"
+    },
+    "section2": { "subtitle": "Frontend Skills" }
   },
   "education": {
     "title": "Education",
-    "sections": [
-      {
-        "subtitle": "Studies",
-        "paragraph": "I hold a Bachelor's degree in Traffic Engineering from the University of Sarajevo, Bosnia and Herzegovina, with a focus on road traffic."
-      },
-      {
-        "subtitle": "Languages",
-        "paragraph": "I hold a C1 certificate in German from the Goethe-Institut. In addition, I speak fluent English at a C1 level."
-      }
-    ]
+    "section1": {
+      "subtitle": "Studies",
+      "paragraph": "I hold a Bachelor's degree in Traffic Engineering from the University of Sarajevo, Bosnia and Herzegovina, with a focus on road traffic."
+    },
+    "section2": {
+      "subtitle": "Languages",
+      "paragraph": "I hold a C1 certificate in German from the Goethe-Institut. In addition, I speak fluent English at a C1 level."
+    }
   },
   "career": {
     "title": "Career",
-    "sections": [
-      {
-        "subtitle": "QA at Bloola GmbH",
-        "paragraph": "As a QA at the German company Bloola GmbH, I was responsible for conducting manual tests of a web app. Both communication with international colleagues and test documentation were conducted in English."
-      },
-      {
-        "subtitle": "Position as a Call Agent",
-        "paragraph": "As a Call Agent in a call center, I was able to significantly develop my skills in communication, empathy, and sales. I was responsible for supporting and advising German customers as well as closing contracts for electricity, gas, internet, and telephone services."
-      }
-    ]
+    "section1": {
+      "subtitle": "QA at Bloola GmbH",
+      "paragraph": "As a QA at the German company Bloola GmbH, I was responsible for conducting manual tests of a web app. Both communication with international colleagues and test documentation were conducted in English."
+    },
+    "section2": {
+      "subtitle": "Position as a Call Agent",
+      "paragraph": "As a Call Agent in a call center, I was able to significantly develop my skills in communication, empathy, and sales. I was responsible for supporting and advising German customers as well as closing contracts for electricity, gas, internet, and telephone services."
+    }
   },
   "projects": {
     "title": "Projects",
-    "sections": [
-      {
-        "paragraph": [
-          "Quiz-App ist eine interaktive Quiz-Anwendung, die aus 10 Fragen mit jeweils vier Antwortmöglichkeiten besteht. Nach Beantwortung aller Fragen erhält der Nutzer eine Auswertung seiner Antworten.",
-          "Technologies: React, TypeScript, Material UI, The Trivia API"
-        ]
-      },
-      {
-        "paragraph": [
-          "Film Atlas is a comprehensive film database that allows users to search for movies, TV series, and people working in the film and television industry, and to access detailed information about them.",
-          "The database not only lists current theatrical releases and popular series, but also provides a preview of upcoming movies (with trailers) and shows, as well as an overview of TV series currently airing. The offering is rounded out by top lists of the highest-rated productions.",
-          "Technologien: React, TypeScript, Material UI, The Movie Database API"
-        ]
-      }
-    ],
+    "section1": {
+      "paragraph1": "Quiz App is an interactive quiz application consisting of 10 questions, each with four answer options. After answering all the questions, the user receives an evaluation of their responses.",
+      "paragraph2": "Technologies: React, TypeScript, Material UI, The Trivia API"
+    },
+    "section2": {
+      "paragraph1": "Film Atlas is a comprehensive film database that allows users to search for movies, TV series, and people working in the film and television industry, and to access detailed information about them.",
+      "paragraph2": "The database not only lists current theatrical releases and popular series, but also provides a preview of upcoming movies (with trailers) and shows, as well as an overview of TV series currently airing. The offering is rounded out by top lists of the highest-rated productions.",
+      "paragraph3": "Technologien: React, TypeScript, Material UI, The Movie Database API"
+    },
     "button": "Open Project"
   },
   "contact": {
@@ -76,17 +62,21 @@
     "subtitle": "Send me a message!",
     "paragraphStart": "Do you have a question, an offer, or just want to say hello?",
     "paragraphEnd": "",
-    "form": {
-      "nameLabel": "Your Name",
-      "emailLabel": "Email Address",
-      "messageLabel": "Your Message"
+    "formLabel": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "message": "Your Message"
     },
     "errorMessage": {
-      "nameError": "Please enter your name",
-      "emailError": "Please enter a valid email address",
-      "messageError": "Please write a message"
+      "name": "Please enter your name",
+      "email": "Please enter a valid email address",
+      "message": "Please write a message"
     },
     "placeholder": "Hello, let's talk about a potential collaboration!",
-    "submitButton": "Send"
+    "submitButton": "Send",
+    "snackbar": {
+      "success": "Message sent successfully!",
+      "error": "Message could not be sent, please try again."
+    }
   }
 }

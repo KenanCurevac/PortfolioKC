@@ -3,8 +3,11 @@ import { forwardRef } from "react";
 import quizapp from "../../assets/quizapp.png";
 import moviedb from "../../assets/moviedb.png";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 export default forwardRef(function Projects(_, ref) {
+  const { t } = useTranslation();
+
   function openProject(url) {
     window.open(url, "_blank");
   }
@@ -12,7 +15,7 @@ export default forwardRef(function Projects(_, ref) {
   return (
     <div className="green-bg" ref={ref}>
       <div className="section-title" data-aos="zoom-in">
-        Projekte
+        {t("projects.title")}
       </div>
       <div className="section-group early-direction-reverse">
         <div
@@ -24,18 +27,16 @@ export default forwardRef(function Projects(_, ref) {
             Quiz-App
           </h1>
           <p className="topic-description">
-            Quiz-App ist eine interaktive Quiz-Anwendung, die aus 10 Fragen mit
-            jeweils vier Antwortmöglichkeiten besteht. Nach Beantwortung aller
-            Fragen erhält der Nutzer eine Auswertung seiner Antworten.
+            {t("projects.section1.paragraph1")}
           </p>
           <p className="topic-description">
-            Technologien: React, TypeScript, Material UI, The Trivia API
+            {t("projects.section1.paragraph2")}
           </p>
           <button
             className="project-button"
             onClick={() => openProject("https://quiz-app-kenan.vercel.app/")}
           >
-            Zum Projekt
+            {t("projects.button")}
           </button>
         </div>
         <img
@@ -57,26 +58,19 @@ export default forwardRef(function Projects(_, ref) {
             Film Atlas
           </h1>
           <p className="topic-description">
-            Film Atlas ist eine umfassende Filmdatenbank, die es Nutzern
-            ermöglicht, nach Filmen, Fernsehserien und Personen, die in der
-            Film- und Fernsehbranche tätig sind, zu suchen und Informationen
-            über diese zu erhalten.
+            {t("projects.section2.paragraph1")}
           </p>
           <p className="topic-description">
-            Die Datenbank listet nicht nur aktuelle Kinofilme und beliebte
-            Serien auf, sondern bietet auch einen Ausblick auf kommende Filme
-            (mit Trailern) und Serien sowie eine Übersicht der aktuell im TV
-            laufenden Serien. Abgerundet wird das Angebot durch Top-Listen der
-            am besten bewerteten Produktionen.
+            {t("projects.section2.paragraph2")}
           </p>
           <p className="topic-description">
-            Technologien: React, TypeScript, Material UI, The Movie Database API
+            {t("projects.section2.paragraph3")}
           </p>
           <button
             className="project-button"
             onClick={() => openProject("https://movie-db-kenan.vercel.app/")}
           >
-            Zum Projekt
+            {t("projects.button")}
           </button>
         </div>
         <img

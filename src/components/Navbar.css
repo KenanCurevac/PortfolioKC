@@ -28,6 +28,7 @@
 
 .MuiDrawer-paper {
   width: 50vw;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +51,7 @@
   color: #001f1f !important;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1050px) {
   .mobile-menu {
     display: block !important;
   }

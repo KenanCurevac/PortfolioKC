@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm({ onOpenSnackbar }) {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function ContactForm({ onOpenSnackbar }) {
     user_email: false,
     message: false,
   });
+  const { t } = useTranslation();
 
   const formRef = useRef();
 
@@ -63,13 +65,11 @@ export default function ContactForm({ onOpenSnackbar }) {
         formRef.current,
         "Lg4RZhibkuSe1v_fb"
       )
-      .then(() => onOpenSnackbar("Nachricht erfolgreich gesendet!", "success"))
-      .catch(() =>
-        onOpenSnackbar(
-          "Nachricht konnte nicht gesendet werden, bitte versuche es erneut.",
-          "error"
-        )
-      );
+      .then(() => {
+        console.log("Email sent successfully");
+        onOpenSnackbar(t("contact.snackbar.success"), "success");
+      })
+      .catch(() => onOpenSnackbar(t("contact.snackbar.error"), "error"));
 
     setFormData({ user_name: "", user_email: "", message: "" });
     setTouched({
@@ -88,7 +88,7 @@ export default function ContactForm({ onOpenSnackbar }) {
     >
       <div className="email-input-container">
         <div className="email-input">
-          <InputLabel htmlFor="name">Dein Name</InputLabel>
+          <InputLabel htmlFor="name">{t("contact.formLabel.name")}</InputLabel>
           <TextField
             id="name"
             name="user_name"
@@ -97,18 +97,20 @@ export default function ContactForm({ onOpenSnackbar }) {
             onInput={handleForm}
             helperText={
               warning.user_name && touched.user_name
-                ? "Bitte geben Sie Ihren Namen ein"
+                ? t("contact.errorMessage.name")
                 : ""
             }
             required
             error={warning.user_name && touched.user_name}
             onBlur={handleBlur}
             color="success"
-            title="Bitte geben Sie Ihren Namen ein"
+            title={t("contact.errorMessage.name")}
           />
         </div>
         <div className="email-input">
-          <InputLabel htmlFor="email">E-mail Adresse</InputLabel>
+          <InputLabel htmlFor="email">
+            {t("contact.formLabel.email")}
+          </InputLabel>
           <TextField
             id="email"
             type="email"
@@ -118,23 +120,25 @@ export default function ContactForm({ onOpenSnackbar }) {
             onInput={handleForm}
             helperText={
               warning.user_email && touched.user_email
-                ? "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+                ? t("contact.errorMessage.email")
                 : ""
             }
             required
             error={warning.user_email && touched.user_email}
             onBlur={handleBlur}
             color="success"
-            title="Bitte geben Sie eine gültige E-Mail-Adresse ein"
+            title={t("contact.errorMessage.email")}
           />
         </div>
       </div>
       <div>
-        <InputLabel htmlFor="textfield">Deine Nachricht</InputLabel>
+        <InputLabel htmlFor="textfield">
+          {t("contact.formLabel.message")}
+        </InputLabel>
         <TextField
           id="textfield"
           name="message"
-          placeholder="Hallo, lass uns über eine mögliche Zusammenarbeit sprechen!"
+          placeholder={t("contact.placeholder")}
           multiline
           rows={3}
           variant="filled"
@@ -142,14 +146,14 @@ export default function ContactForm({ onOpenSnackbar }) {
           onInput={handleForm}
           helperText={
             warning.message && touched.message
-              ? "Bitte schreiben Sie eine Nachricht"
+              ? t("contact.errorMessage.message")
               : ""
           }
           required
           error={warning.message && touched.message}
           onBlur={handleBlur}
           color="success"
-          title="Bitte schreiben Sie eine Nachricht"
+          title={t("contact.errorMessage.message")}
         />
       </div>
       <div style={{ margin: "auto" }}>
@@ -159,7 +163,7 @@ export default function ContactForm({ onOpenSnackbar }) {
           id="submit-button"
           disabled={isButtonDisabled}
         >
-          Senden
+          {t("contact.submitButton")}
         </button>
       </div>
     </form>

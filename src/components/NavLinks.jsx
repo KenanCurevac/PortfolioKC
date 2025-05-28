@@ -2,13 +2,13 @@ import "./NavLinks.css";
 import { useState } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import { useTranslation } from "react-i18next";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import german from "../assets/germany-flag-icon.png";
 import english from "../assets/united-kingdom-flag-icon.png";
 import CheckIcon from "@mui/icons-material/Check";
+import { useTranslation } from "react-i18next";
 
 export default function NavLinks({
   scrollToSection,
@@ -20,14 +20,12 @@ export default function NavLinks({
   onToggleDrawer,
   className,
 }) {
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState("en");
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  function changeLanguage(lng) {
-    i18n.changeLanguage(lng);
-  }
-
-  const handleChange = (event) => {
+  const handleChangeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
     setLanguage(event.target.value);
   };
 
@@ -42,7 +40,7 @@ export default function NavLinks({
           }
         }}
       >
-        Über mich
+        {t("navbar.about")}
       </ListItem>
       <ListItem
         className="navbar-item"
@@ -53,7 +51,7 @@ export default function NavLinks({
           }
         }}
       >
-        Bildung
+        {t("navbar.education")}
       </ListItem>
       <ListItem
         className="navbar-item"
@@ -64,7 +62,7 @@ export default function NavLinks({
           }
         }}
       >
-        Berufserfahrung
+        {t("navbar.career")}
       </ListItem>
       <ListItem
         className="navbar-item"
@@ -75,7 +73,7 @@ export default function NavLinks({
           }
         }}
       >
-        Projekte
+        {t("navbar.projects")}
       </ListItem>
       <ListItem
         className="navbar-item"
@@ -86,35 +84,33 @@ export default function NavLinks({
           }
         }}
       >
-        Kontakt
+        {t("navbar.contact")}
       </ListItem>
       <ListItem className="dropdown-lang">
         <FormControl sx={{ m: 1, minWidth: 120 }}>
           <Select
             value={language}
-            onChange={handleChange}
+            onChange={handleChangeLanguage}
             inputProps={{ "aria-label": "Without label" }}
             variant="standard"
             disableUnderline
             renderValue={(selected) => (
               <div className="top-flag-wrap">
                 <img
-                  src={selected === "english" ? english : german}
+                  src={selected === "en" ? english : german}
                   alt={selected}
                   className="top-flag"
                 />
               </div>
             )}
           >
-            <MenuItem value="english">
+            <MenuItem value="en">
               <img src={english} alt="English" className="flag" /> English{" "}
-              {language === "english" && (
-                <CheckIcon className="dropdown-flag" />
-              )}
+              {language === "en" && <CheckIcon className="dropdown-flag" />}
             </MenuItem>
-            <MenuItem value="german">
-              <img src={german} alt="German" className="flag" /> Deutsch
-              {language === "german" && <CheckIcon className="dropdown-flag" />}
+            <MenuItem value="de">
+              <img src={german} alt="Deutsch" className="flag" /> Deutsch
+              {language === "de" && <CheckIcon className="dropdown-flag" />}
             </MenuItem>
           </Select>
         </FormControl>

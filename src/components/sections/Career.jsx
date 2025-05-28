@@ -3,12 +3,15 @@ import { forwardRef } from "react";
 import bloola from "../../assets/bloola.png";
 import ccc from "../../assets/ccc.jpg";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 export default forwardRef(function Career(_, ref) {
+  const { t } = useTranslation();
+
   return (
     <div className="white-bg" ref={ref}>
       <div className="section-title long-title" data-aos="zoom-in">
-        Berufserfahrung
+        {t("career.title")}
       </div>
       <div className="section-group direction-reverse">
         <img
@@ -24,13 +27,8 @@ export default forwardRef(function Career(_, ref) {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          <h1 className="topic-title">QA bei Bloola GmbH</h1>
-          <p className="topic-description">
-            Als QA bei der deutschen Firma Bloola GmbH war ich für die
-            Durchführung manueller Tests einer Web-App zuständig. Sowohl die
-            Kommunikation mit internationalen Kollegen als auch die
-            Testdokumentation erfolgten auf Englisch.
-          </p>
+          <h1 className="topic-title"> {t("career.section1.subtitle")}</h1>
+          <p className="topic-description">{t("career.section1.paragraph")}</p>
         </div>
       </div>
       <div className="section-group direction-reverse">
@@ -47,14 +45,8 @@ export default forwardRef(function Career(_, ref) {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          <h1 className="topic-title">Tätigkeit als Call Agent</h1>
-          <p className="topic-description">
-            Als Call Agent in einem Call Center konnte ich meine Fähigkeiten im
-            Bereich Kommunikation, Empathie und Verkauf deutlich ausbauen. Dabei
-            war ich für die Betreuung und Beratung deutscher Kunden sowie für
-            den Abschluss von Strom-, Gas-, Internet- und Telefonverträgen
-            zuständig.
-          </p>
+          <h1 className="topic-title">{t("career.section2.subtitle")}</h1>
+          <p className="topic-description">{t("career.section2.paragraph")}</p>
         </div>
       </div>
     </div>
