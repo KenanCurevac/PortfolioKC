@@ -1,7 +1,7 @@
 import "./Hero.css";
 import Navbar from "./Navbar";
-import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 export default function Hero(props) {
   const { t } = useTranslation();
@@ -11,23 +11,25 @@ export default function Hero(props) {
       <Navbar {...props} />
       <div className="hero-content">
         <div className="upper-group">
-          <p className="hero-pretitle" data-aos="fade-up">
-            {t("hero.subtitle")}
-          </p>
-          <h1 className="hero-title" data-aos="zoom-in" data-aos-duration="600">
-            {t("hero.title")}{" "}
-            <span
-              style={{
-                color: "#00df9a",
-              }}
-            >
-              Kenan Ćurevac.
-            </span>
-          </h1>
+          <Fade triggerOnce direction="up" >
+            <p className="hero-pretitle">{t("hero.subtitle")}</p>{" "}
+          </Fade>
+          <Zoom triggerOnce >
+            <h1 className="hero-title">
+              {t("hero.title")}{" "}
+              <span
+                style={{
+                  color: "#00df9a",
+                }}
+              >
+                Kenan Ćurevac.
+              </span>
+            </h1>{" "}
+          </Zoom>
         </div>
-        <p className="hero-description" data-aos="fade-up">
-          {t("hero.paragraph")}
-        </p>
+        <Fade triggerOnce direction="up" delay={200}>
+          <p className="hero-description">{t("hero.paragraph")}</p>
+        </Fade>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
-import "aos/dist/aos.css";
+import { Fade } from "react-awesome-reveal";
 
 export default function Navbar(props) {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -16,29 +16,31 @@ export default function Navbar(props) {
   }
 
   return (
-    <div className="navbar" data-aos="fade-down" data-aos-delay="200">
-      <img src={logo} className="navbar-logo" />
-      <NavLinks {...props} className="navbar-links" />
-      <Button onClick={() => toggleDrawer(true)} className="mobile-menu">
-        <MenuIcon />
-      </Button>
-      <Drawer
-        open={openDrawer}
-        onClose={() => toggleDrawer(false)}
-        anchor="right"
-      >
-        <Button
-          className="navbar-close-button"
-          onClick={() => toggleDrawer(false)}
-        >
-          <CloseIcon />
+    <Fade direction="down" delay={200} triggerOnce>
+      <div className="navbar">
+        <img src={logo} className="navbar-logo" />
+        <NavLinks {...props} className="navbar-links" />
+        <Button onClick={() => toggleDrawer(true)} className="mobile-menu">
+          <MenuIcon />
         </Button>
-        <NavLinks
-          {...props}
-          onToggleDrawer={toggleDrawer}
-          className="drawer-list"
-        />
-      </Drawer>
-    </div>
+        <Drawer
+          open={openDrawer}
+          onClose={() => toggleDrawer(false)}
+          anchor="right"
+        >
+          <Button
+            className="navbar-close-button"
+            onClick={() => toggleDrawer(false)}
+          >
+            <CloseIcon />
+          </Button>
+          <NavLinks
+            {...props}
+            onToggleDrawer={toggleDrawer}
+            className="drawer-list"
+          />
+        </Drawer>
+      </div>
+    </Fade>
   );
 }

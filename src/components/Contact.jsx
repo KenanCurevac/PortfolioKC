@@ -5,8 +5,8 @@ import Alert from "@mui/material/Alert";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactForm from "./ContactForm";
-import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
+import { Zoom, Fade } from "react-awesome-reveal";
 
 export default forwardRef(function Contact(_, ref) {
   const [snackbarState, setSnackbarState] = useState({
@@ -47,43 +47,41 @@ export default forwardRef(function Contact(_, ref) {
         </Alert>
       </Snackbar>
 
-      <div className="contact-title" data-aos="zoom-in" data-aos-duration="600">
-        {t("contact.title")}
-      </div>
-      <div
-        className="icons-container"
-        data-aos="zoom-in-down"
-        data-aos-duration="800"
-      >
-        <a
-          href="https://www.linkedin.com/in/kenan-curevac-2624a4357/"
-          target="_blank"
-        >
-          <LinkedInIcon className="icon" />
-        </a>
-        <a href="https://github.com/KenanCurevac" target="_blank">
-          <GitHubIcon className="icon" />
-        </a>
-      </div>
-      <div
-        className="separator"
-        data-aos="zoom-in-down"
-        data-aos-duration="800"
-      >
-        <div className="separator-line"></div>
-        <div className="separator-or">{t("contact.or")}</div>
-        <div className="separator-line"></div>
-      </div>
-      <div className="contact-form-container" data-aos="zoom-in-down">
-        <div className="call-to-mail">
-          <h1>{t("contact.subtitle")}</h1>
-          <p>
-            {t("contact.paragraphStart")} <br />
-            {t("contact.paragraphEnd")}
-          </p>
+      <Zoom delay={200} triggerOnce>
+        <div className="contact-title">{t("contact.title")}</div>
+      </Zoom>
+      <Fade direction="down" delay={400} duration={1400} triggerOnce>
+        <div className="icons-container">
+          <a
+            href="https://www.linkedin.com/in/kenan-curevac-2624a4357/"
+            target="_blank"
+          >
+            <LinkedInIcon className="icon" />
+          </a>
+          <a href="https://github.com/KenanCurevac" target="_blank">
+            <GitHubIcon className="icon" />
+          </a>
         </div>
-        <ContactForm onOpenSnackbar={handleOpenSnackbar} />
-      </div>
+      </Fade>
+      <Fade direction="down" delay={400} duration={1400} triggerOnce>
+        <div className="separator">
+          <div className="separator-line"></div>
+          <div className="separator-or">{t("contact.or")}</div>
+          <div className="separator-line"></div>
+        </div>
+      </Fade>
+      <Fade direction="down" delay={400} duration={1200} triggerOnce>
+        <div className="contact-form-container">
+          <div className="call-to-mail">
+            <h1>{t("contact.subtitle")}</h1>
+            <p>
+              {t("contact.paragraphStart")} <br />
+              {t("contact.paragraphEnd")}
+            </p>
+          </div>
+          <ContactForm onOpenSnackbar={handleOpenSnackbar} />
+        </div>
+      </Fade>
     </div>
   );
 });
