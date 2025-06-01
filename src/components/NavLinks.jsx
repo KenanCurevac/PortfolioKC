@@ -1,5 +1,5 @@
 import "./NavLinks.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import MenuItem from "@mui/material/MenuItem";
@@ -19,15 +19,34 @@ export default function NavLinks({
   contactSection,
   onToggleDrawer,
   className,
+  language,
+  onLanguageChange,
 }) {
-  const [language, setLanguage] = useState("en");
+  const [selectOpen, setSelectOpen] = useState(false);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
 
   const handleChangeLanguage = (event) => {
     i18n.changeLanguage(event.target.value);
-    setLanguage(event.target.value);
+    onLanguageChange(event);
+    setSelectOpen(false);
   };
+
+  useEffect(() => {
+    const handleClose = () => {
+      if (selectOpen) {
+        setSelectOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleClose, true);
+    window.addEventListener("resize", handleClose);
+
+    return () => {
+      window.removeEventListener("scroll", handleClose, true);
+      window.addEventListener("resize", handleClose);
+    };
+  }, [selectOpen]);
 
   return (
     <List className={className}>
@@ -89,6 +108,9 @@ export default function NavLinks({
       <ListItem className="dropdown-lang">
         <FormControl sx={{ m: 1, minWidth: 120 }}>
           <Select
+            open={selectOpen}
+            onOpen={() => setSelectOpen(true)}
+            onClose={() => setSelectOpen(false)}
             value={language}
             onChange={handleChangeLanguage}
             inputProps={{ "aria-label": "Without label" }}

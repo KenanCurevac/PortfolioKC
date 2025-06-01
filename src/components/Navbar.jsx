@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../assets/port-logo-org.png";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -7,19 +7,35 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
 import { Fade } from "react-awesome-reveal";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Navbar(props) {
+  const [language, setLanguage] = useState("en");
   const [openDrawer, setOpenDrawer] = useState(false);
 
   function toggleDrawer(newOpen) {
     setOpenDrawer(newOpen);
   }
 
+  const closeDrawer = useMediaQuery("(min-width:1050px)");
+
+  useEffect(() => {
+    if (closeDrawer) {
+      toggleDrawer(false);
+    }
+  }, [closeDrawer]);
+
   return (
     <Fade direction="down" delay={200} triggerOnce>
       <div className="navbar">
         <img src={logo} className="navbar-logo" />
-        <NavLinks {...props} className="navbar-links" />
+        <NavLinks
+          {...props}
+          className="navbar-links"
+          language={language}
+          onLanguageChange={(event) => setLanguage(event.target.value)}
+        />
+
         <Button onClick={() => toggleDrawer(true)} className="mobile-menu">
           <MenuIcon />
         </Button>
@@ -38,6 +54,8 @@ export default function Navbar(props) {
             {...props}
             onToggleDrawer={toggleDrawer}
             className="drawer-list"
+            language={language}
+            onLanguageChange={(event) => setLanguage(event.target.value)}
           />
         </Drawer>
       </div>

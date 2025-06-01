@@ -11,10 +11,10 @@ export default function Hero(props) {
       <Navbar {...props} />
       <div className="hero-content">
         <div className="upper-group">
-          <Fade triggerOnce direction="up" >
+          <Fade triggerOnce direction="up">
             <p className="hero-pretitle">{t("hero.subtitle")}</p>{" "}
           </Fade>
-          <Zoom triggerOnce >
+          <Zoom triggerOnce>
             <h1 className="hero-title">
               {t("hero.title")}{" "}
               <span

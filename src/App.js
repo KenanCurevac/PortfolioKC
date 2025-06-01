@@ -5,7 +5,6 @@ import Contact from "./components/Contact";
 import Education from "./components/sections/Education";
 import Hero from "./components/Hero";
 import Projects from "./components/sections/Projects";
-import AOS from "aos";
 import "./i18n/i18n";
 
 function App() {
@@ -18,13 +17,6 @@ function App() {
   function scrollToSection(ref) {
     ref.current.scrollIntoView({ behavior: "smooth" });
   }
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
 
   return (
     <div>

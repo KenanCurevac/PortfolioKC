@@ -66,7 +66,6 @@ export default function ContactForm({ onOpenSnackbar }) {
         "Lg4RZhibkuSe1v_fb"
       )
       .then(() => {
-        console.log("Email sent successfully");
         onOpenSnackbar(t("contact.snackbar.success"), "success");
       })
       .catch(() => onOpenSnackbar(t("contact.snackbar.error"), "error"));
