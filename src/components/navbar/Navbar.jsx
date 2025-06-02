@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { useState, useEffect } from "react";
-import logo from "../assets/port-logo-org.png";
+import logo from "../../assets/port-logo-org.png";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -44,12 +44,15 @@ export default function Navbar(props) {
           onClose={() => toggleDrawer(false)}
           anchor="right"
         >
-          <Button
-            className="navbar-close-button"
-            onClick={() => toggleDrawer(false)}
-          >
-            <CloseIcon />
-          </Button>
+          <div className="sidenav-top">
+            <img src={logo} className="sidenav-logo" />
+            <Button
+              className="navbar-close-button"
+              onClick={() => toggleDrawer(false)}
+            >
+              <CloseIcon />
+            </Button>
+          </div>
           <NavLinks
             {...props}
             onToggleDrawer={toggleDrawer}

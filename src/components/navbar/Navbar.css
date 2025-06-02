@@ -13,6 +13,18 @@
   height: auto;
 }
 
+.sidenav-top {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.sidenav-logo {
+  filter: brightness(20%);
+  width: 200px;
+  aspect-ratio: 2/1;
+}
+
 .mobile-menu {
   display: none !important;
 }
@@ -31,15 +43,11 @@
   max-width: 380px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: linear-gradient(150deg, #00df9a, #016c4a) !important;
   color: white !important;
-}
-
-.navbar-close-button.MuiButton-root {
-  position: absolute;
-  top: 4vh;
+  padding-top: 2vw;
 }
 
 .navbar-close-button .MuiSvgIcon-root {
@@ -69,32 +77,25 @@
   }
 }
 
+@media (max-width: 600px) {
+  .sidenav-logo {
+    width: 67%;
+    top: calc(15px * ((600px-100vw) / 100));
+  }
+
+  .navbar-close-button .MuiSvgIcon-root {
+    font-size: 10vw !important;
+  }
+}
+
 @media (max-width: 520px) {
   .navbar-logo {
     width: 180px;
   }
 }
 
-@media (max-width: 500px) {
-  .navbar-close-button .MuiSvgIcon-root {
-    font-size: 56px !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .navbar-close-button .MuiSvgIcon-root {
-    font-size: 52px !important;
-  }
-}
-
 @media (max-width: 410px) {
   .navbar-logo {
     width: 160px;
-  }
-}
-
-@media (max-width: 400px) {
-  .navbar-close-button .MuiSvgIcon-root {
-    font-size: 48px !important;
   }
 }

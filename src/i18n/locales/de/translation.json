@@ -2,7 +2,7 @@
   "navbar": {
     "about": "Über mich",
     "education": "Bildung",
-    "career": "Berufserfahrung",
+    "career": "Werdegang",
     "projects": "Projekte",
     "contact": "Kontakt"
   },
@@ -33,7 +33,7 @@
     }
   },
   "career": {
-    "title": "Berufserfahrung",
+    "title": "Werdegang",
     "section1": {
       "subtitle": "QA bei Bloola GmbH",
       "paragraph": "Als QA bei der deutschen Firma Bloola GmbH war ich für die Durchführung manueller Tests einer Web-App zuständig. Sowohl die Kommunikation mit internationalen Kollegen als auch die Testdokumentation erfolgten auf Englisch."

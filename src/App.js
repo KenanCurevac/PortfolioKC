@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import AboutMe from "./components/sections/AboutMe";
 import Career from "./components/sections/Career";
-import Contact from "./components/Contact";
+import Contact from "./components/contact/Contact";
 import Education from "./components/sections/Education";
 import Hero from "./components/Hero";
 import Projects from "./components/sections/Projects";

@@ -1,5 +1,5 @@
 import "./Hero.css";
-import Navbar from "./Navbar";
+import Navbar from "./navbar/Navbar";
 import { useTranslation } from "react-i18next";
 import { Fade, Zoom } from "react-awesome-reveal";
 
