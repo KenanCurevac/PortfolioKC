@@ -36,7 +36,10 @@ export default function Navbar(props) {
           onLanguageChange={(event) => setLanguage(event.target.value)}
         />
 
-        <Button onClick={() => toggleDrawer(true)} className="mobile-menu">
+        <Button
+          onClick={() => toggleDrawer(true)}
+          className="sidenav-open-button"
+        >
           <MenuIcon />
         </Button>
         <Drawer
@@ -47,7 +50,7 @@ export default function Navbar(props) {
           <div className="sidenav-top">
             <img src={logo} className="sidenav-logo" />
             <Button
-              className="navbar-close-button"
+              className="sidenav-close-button"
               onClick={() => toggleDrawer(false)}
             >
               <CloseIcon />
@@ -56,7 +59,7 @@ export default function Navbar(props) {
           <NavLinks
             {...props}
             onToggleDrawer={toggleDrawer}
-            className="drawer-list"
+            className="sidenav-links"
             language={language}
             onLanguageChange={(event) => setLanguage(event.target.value)}
           />

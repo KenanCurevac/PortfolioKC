@@ -14,14 +14,14 @@
   margin-right: 5%;
 }
 
-.drawer-list.MuiList-root {
+.sidenav-links.MuiList-root {
   width: fit-content;
   display: flex;
   flex-direction: column;
   margin-top: 6vh;
 }
 
-.drawer-list .navbar-item {
+.sidenav-links .navbar-item {
   padding: 0px 16px 24px 16px;
 }
 
@@ -29,13 +29,13 @@
   color: #00df9a;
 }
 
-.drawer-list .MuiListItem-root {
+.sidenav-links .MuiListItem-root {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: bold;
 }
 
-.drawer-list .MuiListItem-root:hover {
+.sidenav-links .MuiListItem-root:hover {
   color: #001f1f !important;
 }
 
@@ -52,13 +52,13 @@
 }
 
 @media (max-width: 480px) {
-  .drawer-list .MuiListItem-root {
+  .sidenav-links .MuiListItem-root {
     font-size: 22px;
   }
 }
 
 @media (max-width: 400px) {
-  .drawer-list .MuiListItem-root {
+  .sidenav-links .MuiListItem-root {
     font-size: 20px;
   }
 }

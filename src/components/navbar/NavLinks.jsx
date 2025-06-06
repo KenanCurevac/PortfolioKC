@@ -23,7 +23,7 @@ export default function NavLinks({
 }) {
   const { t } = useTranslation();
 
-  const isDrawer = className === "drawer-list";
+  const isDrawer = className === "sidenav-links";
 
   return (
     <List className={className}>

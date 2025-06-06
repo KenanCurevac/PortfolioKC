@@ -11,7 +11,7 @@ export default forwardRef(function Career(_, ref) {
   return (
     <div className="white-bg" ref={ref}>
       <Zoom triggerOnce delay={200}>
-        <div className="section-title long-title">{t("career.title")}</div>
+        <div className="section-title">{t("career.title")}</div>
       </Zoom>
       <div className="section-group direction-reverse">
         <Fade direction="left" delay={800} duration={1400} triggerOnce>
