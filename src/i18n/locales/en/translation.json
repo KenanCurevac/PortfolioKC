@@ -72,6 +72,11 @@
       "email": "Please enter a valid email address",
       "message": "Please write a message"
     },
+    "tooltip": {
+      "name": "How should I address you?",
+      "email": "I'll get in touch with you here",
+      "message": "Please tell me more about your idea or request"
+    },
     "placeholder": "Hello, let's talk about a potential collaboration!",
     "submitButton": "Send",
     "snackbar": {

@@ -12,7 +12,7 @@ export default function Hero(props) {
       <div className="hero-content">
         <div className="upper-group">
           <Fade triggerOnce direction="up">
-            <p className="hero-pretitle">{t("hero.subtitle")}</p>{" "}
+            <p className="hero-subtitle">{t("hero.subtitle")}</p>{" "}
           </Fade>
           <Zoom triggerOnce>
             <h1 className="hero-title">

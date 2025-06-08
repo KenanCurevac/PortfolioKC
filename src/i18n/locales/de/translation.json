@@ -72,6 +72,11 @@
       "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
       "message": "Bitte schreiben Sie eine Nachricht"
     },
+    "tooltip": {
+      "name": "Wie darf ich Sie ansprechen?",
+      "email": "So kann ich Sie erreichen",
+      "message": "Bitte erzählen Sie mir mehr über Ihre Idee oder Anfrage"
+    },
     "placeholder": "Hallo, lass uns über eine mögliche Zusammenarbeit sprechen!",
     "submitButton": "Senden",
     "snackbar": {

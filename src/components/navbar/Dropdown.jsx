@@ -2,29 +2,29 @@ import "./Dropdown.css";
 import { useState, useEffect } from "react";
 import ListItem from "@mui/material/ListItem";
 import MenuItem from "@mui/material/MenuItem";
+import { useTranslation } from "react-i18next";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import german from "../../assets/germany-flag-icon.png";
 import english from "../../assets/united-kingdom-flag-icon.png";
 import CheckIcon from "@mui/icons-material/Check";
-import { useTranslation } from "react-i18next";
 
 export default function Dropdown({ language, onLanguageChange }) {
   const [selectOpen, setSelectOpen] = useState(false);
   const { i18n } = useTranslation();
 
-  const handleChangeLanguage = (event) => {
+  function handleChangeLanguage(event) {
     i18n.changeLanguage(event.target.value);
     onLanguageChange(event);
     setSelectOpen(false);
-  };
+  }
 
   useEffect(() => {
-    const handleClose = () => {
+    function handleClose() {
       if (selectOpen) {
         setSelectOpen(false);
       }
-    };
+    }
 
     window.addEventListener("scroll", handleClose, true);
     window.addEventListener("resize", handleClose);
@@ -36,7 +36,7 @@ export default function Dropdown({ language, onLanguageChange }) {
   }, [selectOpen]);
 
   return (
-    <ListItem className="dropdown-lang">
+    <ListItem className="language-dropdown">
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <Select
           open={selectOpen}
@@ -48,22 +48,22 @@ export default function Dropdown({ language, onLanguageChange }) {
           variant="standard"
           disableUnderline
           renderValue={(selected) => (
-            <div className="top-flag-wrap">
+            <div className="selected-flag-wrap">
               <img
-                src={selected === "en" ? english : german}
+                src={selected === "de" ? german : english}
                 alt={selected}
-                className="top-flag"
+                className="selected-flag"
               />
             </div>
           )}
         >
           <MenuItem value="en">
-            <img src={english} alt="English" className="flag" /> English{" "}
-            {language === "en" && <CheckIcon className="dropdown-flag" />}
+            <img src={english} alt="English" className="flag" /> English
+            {language === "en" && <CheckIcon className="checkmark" />}
           </MenuItem>
           <MenuItem value="de">
             <img src={german} alt="Deutsch" className="flag" /> Deutsch
-            {language === "de" && <CheckIcon className="dropdown-flag" />}
+            {language === "de" && <CheckIcon className="checkmark" />}
           </MenuItem>
         </Select>
       </FormControl>

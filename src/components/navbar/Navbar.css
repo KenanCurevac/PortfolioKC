@@ -28,6 +28,7 @@
 .sidenav-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
 }
 
@@ -62,11 +63,5 @@
 @media (max-width: 1050px) {
   .sidenav-open-button {
     display: block !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .sidenav-logo {
-    top: calc(15px * ((600px-100vw) / 100));
   }
 }

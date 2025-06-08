@@ -25,7 +25,7 @@ export default function ContactForm({ onOpenSnackbar }) {
 
   const formRef = useRef();
 
-  const isButtonDisabled =
+  const buttonIsDisabled =
     Object.values(warning).includes(true) ||
     Object.values(formData).some((value) => value.trim() === "");
 
@@ -103,7 +103,7 @@ export default function ContactForm({ onOpenSnackbar }) {
             error={warning.user_name && touched.user_name}
             onBlur={handleBlur}
             color="success"
-            title={t("contact.errorMessage.name")}
+            title={t("contact.tooltip.name")}
           />
         </div>
         <div className="email-input">
@@ -126,7 +126,7 @@ export default function ContactForm({ onOpenSnackbar }) {
             error={warning.user_email && touched.user_email}
             onBlur={handleBlur}
             color="success"
-            title={t("contact.errorMessage.email")}
+            title={t("contact.tooltip.email")}
           />
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function ContactForm({ onOpenSnackbar }) {
           error={warning.message && touched.message}
           onBlur={handleBlur}
           color="success"
-          title={t("contact.errorMessage.message")}
+          title={t("contact.tooltip.message")}
         />
       </div>
       <div style={{ margin: "auto" }}>
@@ -160,7 +160,7 @@ export default function ContactForm({ onOpenSnackbar }) {
           className="send-email-button"
           type="submit"
           id="submit-button"
-          disabled={isButtonDisabled}
+          disabled={buttonIsDisabled}
         >
           {t("contact.submitButton")}
         </button>

@@ -57,7 +57,7 @@
 }
 
 .call-to-mail {
-  width: 100%;
+  width: min(100%, 92vw);
   text-align: center;
   color: #002e2e;
   font-size: 20px;
@@ -66,10 +66,4 @@
 
 .MuiSnackbar-root .MuiPaper-root {
   min-width: 265px !important;
-}
-
-@media (max-width: 500px) {
-  .call-to-mail {
-    width: 92vw;
-  }
 }

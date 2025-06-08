@@ -1,15 +1,22 @@
-.dropdown-lang.MuiListItem-root {
+.selected-flag-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+}
+
+.language-dropdown.MuiListItem-root {
   padding: 0px !important;
   margin-bottom: -12px !important;
   margin-left: 12px;
 }
 
-.dropdown-lang .MuiFormControl-root {
+.language-dropdown .MuiFormControl-root {
   min-width: 100px !important;
   margin-top: 0px;
 }
 
-.dropdown-lang .MuiInputBase-root {
+.language-dropdown .MuiInputBase-root {
   width: fit-content;
 }
 
@@ -22,25 +29,11 @@
   border-radius: 8px !important;
 }
 
-.top-flag-wrap {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin-left: 14px;
-}
-
-.top-flag {
+.selected-flag {
   width: 48px;
 }
 
-.flag {
-  object-fit: contain;
-  width: 40px;
-  border-radius: 8px;
-  margin-right: 8%;
-}
-
-.dropdown-lang .MuiSvgIcon-root {
+.language-dropdown .MuiSvgIcon-root {
   color: white;
   margin-right: 4px;
 }
@@ -55,14 +48,21 @@
   background-color: rgba(1, 29, 22, 0.3) !important;
 }
 
-.dropdown-flag.MuiSvgIcon-root {
+.flag {
+  object-fit: contain;
+  width: 40px;
+  border-radius: 8px;
+  margin-right: 8%;
+}
+
+.checkmark.MuiSvgIcon-root {
   margin-left: 4%;
   color: white;
   font-size: 28px;
 }
 
 @media (max-width: 1050px) {
-  .dropdown-lang {
+  .language-dropdown {
     display: flex;
     justify-content: flex-start !important;
     align-items: center !important;
@@ -74,16 +74,11 @@
     height: 65px !important;
   }
 
-  .top-flag {
+  .selected-flag {
     width: 58px;
   }
 
-  .dropdown-lang .MuiSvgIcon-root {
+  .language-dropdown .MuiSvgIcon-root {
     margin-right: 7px;
-  }
-
-  .dropdown-lang .MuiPaper-root {
-    width: 140px !important;
-    margin-left: 16px;
   }
 }

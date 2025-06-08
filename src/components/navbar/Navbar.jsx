@@ -10,7 +10,7 @@ import { Fade } from "react-awesome-reveal";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Navbar(props) {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("de");
   const [openDrawer, setOpenDrawer] = useState(false);
 
   function toggleDrawer(newOpen) {

@@ -24,93 +24,32 @@
   justify-content: space-evenly;
 }
 
-.hero-pretitle {
+.hero-subtitle {
   color: #00df9a;
-  font-size: 20px;
+  font-size: clamp(15px, 2.5vw, 20px);
   font-weight: bold;
 }
 
 .hero-title {
-  font-size: 70px;
+  font-size: clamp(52px, 10vw, 70px);
   font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 36px;
+  padding-top: min(10px, 0.3vw);
+  padding-bottom: min(36px, 4vw);
 }
 
 .hero-description {
-  font-size: 28px;
+  font-size: clamp(19px, 3.5vw, 28px);
   font-weight: bold;
   color: rgb(164, 164, 164);
   text-indent: 18px;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 820px) {
   .hero-content {
     margin-top: 23px;
   }
 
-  .hero-pretitle {
-    font-size: 18px;
-  }
-
-  .hero-title {
-    font-size: 64px;
-    padding-top: 6px;
-    padding-bottom: 33px;
-  }
-
-  .hero-description {
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 630px) {
-  .hero-pretitle {
-    font-size: 16px;
-  }
-
-  .hero-title {
-    font-size: 60px;
-    padding-top: 2px;
-    padding-bottom: 26px;
-  }
-
-  .hero-description {
-    font-size: 23px;
-  }
-}
-
-@media (max-width: 520px) {
   .hero-container {
-    padding-top: 35px;
-  }
-
-  .hero-pretitle {
-    font-size: 15px;
-  }
-
-  .hero-title {
-    font-size: 57px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .hero-description {
-    font-size: 21px;
-  }
-}
-@media (max-width: 475px) {
-  .hero-container {
-    padding-top: 28px;
-  }
-}
-
-@media (max-width: 410px) {
-  .hero-title {
-    font-size: 52px;
-  }
-
-  .hero-description {
-    font-size: 19px;
+    padding-top: min(28px, 6vw, 40px);
   }
 }
