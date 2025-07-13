@@ -52,7 +52,7 @@
     "section2": {
       "paragraph1": "Film Atlas ist eine umfassende Filmdatenbank, die es Nutzern ermöglicht, nach Filmen, Fernsehserien und Personen, die in der Film- und Fernsehbranche tätig sind, zu suchen und Informationen über diese zu erhalten.",
       "paragraph2": "Die Datenbank listet nicht nur aktuelle Kinofilme und beliebte Serien auf, sondern bietet auch einen Ausblick auf kommende Filme (mit Trailern) und Serien sowie eine Übersicht der aktuell im TV laufenden Serien. Abgerundet wird das Angebot durch Top-Listen der am besten bewerteten Produktionen.",
-      "paragraph3": "Technologien: React, TypeScript, Material UI, The Movie Database API"
+      "paragraph3": "Technologien: React, TypeScript, SCSS, Material UI, The Movie Database API"
     },
     "button": "Zum Projekt"
   },
