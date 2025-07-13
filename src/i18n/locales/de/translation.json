@@ -47,7 +47,7 @@
     "title": "Projekte",
     "section1": {
       "paragraph1": "Quiz-App ist eine interaktive Quiz-Anwendung, die aus 10 Fragen mit jeweils vier Antwortmöglichkeiten besteht. Nach Beantwortung aller Fragen erhält der Nutzer eine Auswertung seiner Antworten.",
-      "paragraph2": "Technologien: React, TypeScript, Material UI, The Trivia API"
+      "paragraph2": "Technologien: React, TypeScript, Redux Toolkit, Material UI, The Trivia API"
     },
     "section2": {
       "paragraph1": "Film Atlas ist eine umfassende Filmdatenbank, die es Nutzern ermöglicht, nach Filmen, Fernsehserien und Personen, die in der Film- und Fernsehbranche tätig sind, zu suchen und Informationen über diese zu erhalten.",

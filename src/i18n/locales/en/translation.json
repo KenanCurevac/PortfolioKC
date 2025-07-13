@@ -47,12 +47,12 @@
     "title": "Projects",
     "section1": {
       "paragraph1": "Quiz App is an interactive quiz application consisting of 10 questions, each with four answer options. After answering all the questions, the user receives an evaluation of their responses.",
-      "paragraph2": "Technologies: React, TypeScript, Material UI, The Trivia API"
+      "paragraph2": "Technologies: React, TypeScript, Redux Toolkit, Material UI, The Trivia API"
     },
     "section2": {
       "paragraph1": "Film Atlas is a comprehensive film database that allows users to search for movies, TV series, and people working in the film and television industry, and to access detailed information about them.",
       "paragraph2": "The database not only lists current theatrical releases and popular series, but also provides a preview of upcoming movies (with trailers) and shows, as well as an overview of TV series currently airing. The offering is rounded out by top lists of the highest-rated productions.",
-      "paragraph3": "Technologien: React, TypeScript, Material UI, The Movie Database API"
+      "paragraph3": "Technologien: React, TypeScript, SCSS, Material UI, The Movie Database API"
     },
     "button": "Open Project"
   },
