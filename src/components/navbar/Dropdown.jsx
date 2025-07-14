@@ -31,7 +31,7 @@ export default function Dropdown({ language, onLanguageChange }) {
 
     return () => {
       window.removeEventListener("scroll", handleClose, true);
-      window.addEventListener("resize", handleClose);
+      window.removeEventListener("resize", handleClose);
     };
   }, [selectOpen]);
 
