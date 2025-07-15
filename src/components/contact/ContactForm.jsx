@@ -79,12 +79,7 @@ export default function ContactForm({ onOpenSnackbar }) {
   }
 
   return (
-    <form
-      className="contact-form"
-      id="home-contact"
-      ref={formRef}
-      onSubmit={sendEmail}
-    >
+    <form className="contact-form" ref={formRef} onSubmit={sendEmail}>
       <div className="email-input-container">
         <div className="email-input">
           <InputLabel htmlFor="name">{t("contact.formLabel.name")}</InputLabel>
@@ -159,7 +154,6 @@ export default function ContactForm({ onOpenSnackbar }) {
         <button
           className="send-email-button"
           type="submit"
-          id="submit-button"
           disabled={buttonIsDisabled}
         >
           {t("contact.submitButton")}

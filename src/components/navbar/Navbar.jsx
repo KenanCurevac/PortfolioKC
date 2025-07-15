@@ -33,7 +33,7 @@ export default function Navbar(props) {
           {...props}
           className="navbar-links"
           language={language}
-          onLanguageChange={(event) => setLanguage(event.target.value)}
+          onLanguageChange={(value) => setLanguage(value)}
         />
 
         <Button
@@ -61,7 +61,7 @@ export default function Navbar(props) {
             onToggleDrawer={toggleDrawer}
             className="sidenav-links"
             language={language}
-            onLanguageChange={(event) => setLanguage(event.target.value)}
+            onLanguageChange={(value) => setLanguage(value)}
           />
         </Drawer>
       </div>

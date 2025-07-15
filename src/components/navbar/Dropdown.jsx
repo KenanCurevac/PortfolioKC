@@ -15,7 +15,7 @@ export default function Dropdown({ language, onLanguageChange }) {
 
   function handleChangeLanguage(event) {
     i18n.changeLanguage(event.target.value);
-    onLanguageChange(event);
+    onLanguageChange(event.target.value);
     setSelectOpen(false);
   }
 
