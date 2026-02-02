@@ -16,14 +16,13 @@ export default function NavLinks({
   careerSection,
   projectsSection,
   contactSection,
-  onToggleDrawer,
+  onToggleMobileMenu,
   className,
   language,
   onLanguageChange,
+  isMobile,
 }) {
   const { t } = useTranslation();
-
-  const isDrawer = className === "sidenav-links";
 
   return (
     <List className={className}>
@@ -31,57 +30,47 @@ export default function NavLinks({
         className="navbar-item"
         onClick={() => {
           scrollToSection(aboutSection);
-          {
-            isDrawer && onToggleDrawer(false);
-          }
+          isMobile && onToggleMobileMenu(false);
         }}
         style={{ whiteSpace: "nowrap" }}
       >
-        {isDrawer && <PersonIcon />} {t("navbar.about")}
+        {isMobile && <PersonIcon />} {t("navbar.about")}
       </ListItem>
       <ListItem
         className="navbar-item"
         onClick={() => {
           scrollToSection(educationSection);
-          {
-            isDrawer && onToggleDrawer(false);
-          }
+          isMobile && onToggleMobileMenu(false);
         }}
       >
-        {isDrawer && <SchoolIcon />} {t("navbar.education")}
+        {isMobile && <SchoolIcon />} {t("navbar.education")}
       </ListItem>
       <ListItem
         className="navbar-item"
         onClick={() => {
           scrollToSection(careerSection);
-          {
-            isDrawer && onToggleDrawer(false);
-          }
+          isMobile && onToggleMobileMenu(false);
         }}
       >
-        {isDrawer && <BusinessIcon />} {t("navbar.career")}
+        {isMobile && <BusinessIcon />} {t("navbar.career")}
       </ListItem>
       <ListItem
         className="navbar-item"
         onClick={() => {
           scrollToSection(projectsSection);
-          {
-            isDrawer && onToggleDrawer(false);
-          }
+          isMobile && onToggleMobileMenu(false);
         }}
       >
-        {isDrawer && <CodeIcon />} {t("navbar.projects")}
+        {isMobile && <CodeIcon />} {t("navbar.projects")}
       </ListItem>
       <ListItem
         className="navbar-item"
         onClick={() => {
           scrollToSection(contactSection);
-          {
-            isDrawer && onToggleDrawer(false);
-          }
+          isMobile && onToggleMobileMenu(false);
         }}
       >
-        {isDrawer && <EmailIcon />} {t("navbar.contact")}
+        {isMobile && <EmailIcon />} {t("navbar.contact")}
       </ListItem>
       <Dropdown language={language} onLanguageChange={onLanguageChange} />
     </List>

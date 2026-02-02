@@ -1,29 +1,32 @@
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import logo from "../../assets/port-logo-org.png";
-import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
 import { Fade } from "react-awesome-reveal";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar(props) {
   const [language, setLanguage] = useState("de");
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
-  function toggleDrawer(newOpen) {
-    setOpenDrawer(newOpen);
+  function handleLanguageChange(language) {
+    setLanguage(language);
   }
 
-  const closeDrawer = useMediaQuery("(min-width:1050px)");
+  function toggleMobileMenu(newOpen) {
+    setOpenMobileMenu(newOpen);
+  }
+
+  const closeMobileMenu = useMediaQuery("(min-width:1050px)");
 
   useEffect(() => {
-    if (closeDrawer) {
-      toggleDrawer(false);
+    if (closeMobileMenu) {
+      toggleMobileMenu(false);
     }
-  }, [closeDrawer]);
+  }, [closeMobileMenu]);
 
   return (
     <Fade direction="down" delay={200} triggerOnce>
@@ -33,37 +36,23 @@ export default function Navbar(props) {
           {...props}
           className="navbar-links"
           language={language}
-          onLanguageChange={(value) => setLanguage(value)}
+          onLanguageChange={handleLanguageChange}
+          isMobile={false}
         />
 
         <Button
-          onClick={() => toggleDrawer(true)}
+          onClick={() => toggleMobileMenu(true)}
           className="sidenav-open-button"
         >
           <MenuIcon />
         </Button>
-        <Drawer
-          open={openDrawer}
-          onClose={() => toggleDrawer(false)}
-          anchor="right"
-        >
-          <div className="sidenav-top">
-            <img src={logo} className="sidenav-logo" />
-            <Button
-              className="sidenav-close-button"
-              onClick={() => toggleDrawer(false)}
-            >
-              <CloseIcon />
-            </Button>
-          </div>
-          <NavLinks
-            {...props}
-            onToggleDrawer={toggleDrawer}
-            className="sidenav-links"
-            language={language}
-            onLanguageChange={(value) => setLanguage(value)}
-          />
-        </Drawer>
+        <MobileMenu
+          {...props}
+          openMobileMenu={openMobileMenu}
+          onToggleMobileMenu={toggleMobileMenu}
+          language={language}
+          onLanguageChange={handleLanguageChange}
+        />
       </div>
     </Fade>
   );
