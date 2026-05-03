@@ -2,6 +2,7 @@ import "./Sections.css";
 import { forwardRef } from "react";
 import bloola from "../../assets/bloola.png";
 import ccc from "../../assets/ccc.jpg";
+import hadzici from "../../assets/hadzici.jpg";
 import { useTranslation } from "react-i18next";
 import { Fade, Zoom } from "react-awesome-reveal";
 
@@ -15,7 +16,7 @@ export default forwardRef(function Career(_, ref) {
       </Zoom>
       <div className="section-group direction-reverse">
         <Fade direction="left" delay={800} duration={1400} triggerOnce>
-          <img className="topic-image" src={bloola} alt="Bloola GmbH" />{" "}
+          <img className="topic-image" src={bloola} alt="Bloola GmbH" />
         </Fade>
         <Zoom delay={600} duration={1400} triggerOnce>
           <div className="topic-container">
@@ -28,13 +29,31 @@ export default forwardRef(function Career(_, ref) {
       </div>
       <div className="section-group direction-reverse">
         <Fade direction="left" delay={800} duration={1400} triggerOnce>
-          <img className="topic-image" src={ccc} alt="CCC Call Center" />{" "}
+          <img className="topic-image" src={ccc} alt="CCC Call Center" />
         </Fade>
         <Zoom delay={600} duration={1400} triggerOnce>
           <div className="topic-container">
             <h1 className="topic-title">{t("career.section2.subtitle")}</h1>
             <p className="topic-description">
               {t("career.section2.paragraph")}
+            </p>
+          </div>{" "}
+        </Zoom>
+      </div>
+      <div className="section-group direction-reverse">
+        <Fade direction="left" delay={800} duration={1400} triggerOnce>
+          <img
+            className="topic-image"
+            style={{ maxWidth: "400px" }}
+            src={hadzici}
+            alt="Hadzici"
+          />
+        </Fade>
+        <Zoom delay={600} duration={1400} triggerOnce>
+          <div className="topic-container">
+            <h1 className="topic-title">{t("career.section3.subtitle")}</h1>
+            <p className="topic-description">
+              {t("career.section3.paragraph")}
             </p>
           </div>{" "}
         </Zoom>

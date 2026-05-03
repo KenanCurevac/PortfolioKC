@@ -9,7 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar(props) {
-  const [language, setLanguage] = useState("de");
+  const [language, setLanguage] = useState("en");
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   function handleLanguageChange(language) {
@@ -32,6 +32,7 @@ export default function Navbar(props) {
     <Fade direction="down" delay={200} triggerOnce>
       <div className="navbar">
         <img src={logo} className="navbar-logo" />
+
         <NavLinks
           {...props}
           className="navbar-links"
@@ -46,6 +47,7 @@ export default function Navbar(props) {
         >
           <MenuIcon />
         </Button>
+
         <MobileMenu
           {...props}
           openMobileMenu={openMobileMenu}

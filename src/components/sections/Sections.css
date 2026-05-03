@@ -2,14 +2,14 @@
   background-color: white;
   color: #002e2e;
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 7vw;
 }
 
 .green-bg {
   background-color: #001f1f;
   color: white;
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 7vw;
 }
 
 .section-title {
@@ -25,7 +25,7 @@
   max-width: 1240px;
   margin: 60px auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
@@ -50,42 +50,45 @@
   width: 35vw;
 }
 
-.topic-image {
+.topic-image-wrap {
   object-fit: contain;
-  border-radius: 12px;
-  max-width: 35vw;
-  max-height: 450px;
-  width: 100%;
-}
-
-.square-image-container {
-  width: 35vw;
+  height: clamp(280px, 33vw, 460px);
+  width: clamp(280px, 33vw, 460px);
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 450px;
-  height: 100%;
 }
 
-.square-image {
-  object-fit: contain;
+.topic-image {
   border-radius: 12px;
-  max-height: 450px;
-  height: auto;
-  width: 82%;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .project-button {
   background-color: white;
   color: #001f1f;
-  width: min(300px, 75vw);
   border-radius: 8px;
   font-weight: bold;
-  font-size: 20px;
   padding: 14px;
   text-align: center;
   cursor: pointer;
   border: none;
+  margin: 20px auto;
+}
+
+.fullstack-button {
+  width: 30%;
+  font-size: 16px;
+}
+
+.frontend-button {
+  width: 45%;
+  font-size: 20px;
 }
 
 .project-button:hover {
@@ -131,8 +134,13 @@
     width: 75vw;
   }
 
+  .flat-image-wrap {
+    max-height: 200px;
+  }
+
   .topic-image {
     max-width: 65vw;
+    min-width: 320px;
   }
 
   .square-image {

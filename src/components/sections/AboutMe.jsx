@@ -15,12 +15,9 @@ export default forwardRef(function AboutMe(_, ref) {
       </Zoom>
       <div className="section-group direction-reverse">
         <Fade direction="left" delay={800} duration={1400} triggerOnce>
-          <img
-            className="topic-image"
-            src={cvPicture}
-            alt="Photo"
-            style={{ maxHeight: "550px" }}
-          />
+          <div className="topic-image-wrap" style={{ marginBottom: "40px" }}>
+            <img className="topic-image" src={cvPicture} alt="Photo" />
+          </div>
         </Fade>
         <Zoom delay={600} duration={1400} triggerOnce>
           <div className="topic-container">
@@ -37,14 +34,16 @@ export default forwardRef(function AboutMe(_, ref) {
       </div>
       <div className="section-group direction-reverse">
         <Fade direction="left" delay={800} duration={1400} triggerOnce>
-          <img className="topic-image" src={react} alt="React" />{" "}
+          <div className="topic-image-wrap">
+            <img className="topic-image" src={react} alt="React" />
+          </div>
         </Fade>
         <Zoom delay={600} duration={1400} triggerOnce>
           <div className="topic-container">
             <h1 className="topic-title">{t("about.section2.subtitle")}</h1>
             <p className="topic-description" style={{ fontSize: "24px" }}>
-              Javascript, React.js, TypeScript, GitHub, Redux Toolkit, SCSS,
-              MaterialUI
+              Javascript, React.js, Next.js, TypeScript, GitHub, Redux Toolkit,
+              Zustand, SCSS, MaterialUI, shadcn/ui
             </p>
           </div>
         </Zoom>

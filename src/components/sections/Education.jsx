@@ -25,11 +25,13 @@ export default forwardRef(function Education(_, ref) {
           </div>
         </Zoom>
         <Fade direction="right" delay={800} duration={1400} triggerOnce>
-          <img
-            className="topic-image"
-            src={university}
-            alt="University of Sarajevo"
-          />
+          <div className="topic-image-wrap">
+            <img
+              className="topic-image"
+              src={university}
+              alt="University of Sarajevo"
+            />
+          </div>
         </Fade>
       </div>
       <div className="section-group">
@@ -44,8 +46,8 @@ export default forwardRef(function Education(_, ref) {
           </div>
         </Zoom>
         <Fade direction="right" delay={800} duration={1400} triggerOnce>
-          <div className="square-image-container">
-            <img className="square-image" src={goethe} alt="Goethe-Institut" />
+          <div className="topic-image-wrap">
+            <img className="topic-image" src={goethe} alt="Goethe-Institut" />
           </div>
         </Fade>
       </div>

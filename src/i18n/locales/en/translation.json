@@ -15,9 +15,9 @@
     "title": "About Me",
     "section1": {
       "subtitle": "A Few Words About Me",
-      "paragraph1": "I am Kenan Ćurevac, a 27-year-old engineer with a Bachelor's degree in Traffic Engineering from the University of Sarajevo, where I also live. The German language and culture have been part of my life since childhood, which is reflected in my fluent German skills - I grew up watching German television!",
-      "paragraph2": "I gained one and a half years of experience in the field of quality assurance (QA). This time helped me develop a strong understanding of reliability and teamwork. I also have a strong affinity for mathematics. Even in school, I took part in math competitions and discovered my enjoyment of analytical thinking.",
-      "paragraph3": "I place great importance on detail-oriented work and consider myself a solution-oriented team player. I am motivated to continuously develop myself and to keep learning and growing throughout my professional life. Let's get to know each other - feel free to take a look at my projects. I look forward to hearing from you!"
+      "paragraph1": "I am Kenan Ćurevac, a 28-year-old engineer with a Bachelor's degree in Traffic Engineering from the University of Sarajevo, where I currently live. I have a strong affinity for mathematics and analytical thinking and participated in math competitions during my school years, which led me to discover programming as a field that aligns closely with these strengths.",
+      "paragraph2": "I gained one and a half years of experience in Quality Assurance (QA), primarily writing test documentation, which strengthened my detail-oriented work style and helped solidify my fluent English skills. I am fluent in German as well, having grown up with German television. I am working as an Intern in the Department for Development, which provided a natural extension of my degree to further develop my qualifications and gain practical experience.",
+      "paragraph3": "I am consistently learning and challenging myself, take great pride in my work, and strive to continuously expand my knowledge rather than let it stagnate. I enjoy applying what I learn in practice and have built several personal projects to further solidify and extend my skills. Feel free to take a look at them — I look forward to hearing from you!"
     },
     "section2": { "subtitle": "Frontend Skills" }
   },
@@ -41,20 +41,32 @@
     "section2": {
       "subtitle": "Position as a Call Agent",
       "paragraph": "As a Call Agent in a call center, I was able to significantly develop my skills in communication, empathy, and sales. I was responsible for supporting and advising German customers as well as closing contracts for electricity, gas, internet, and telephone services."
+    },
+    "section3": {
+      "subtitle": "Intern in the Municipality of Hadžići",
+      "paragraph": "As an intern at the Municipality of Hadžići, I supported the Department for Development and Housing-Communal Affairs with office tasks such as document processing, correspondence, and administrative organization. I also worked with Microsoft Word and Excel to create and manage documents and spreadsheets."
     }
   },
   "projects": {
     "title": "Projects",
     "section1": {
-      "paragraph1": "Quiz App is an interactive quiz application consisting of 10 questions, each with four answer options. After answering all the questions, the user receives an evaluation of their responses.",
-      "paragraph2": "Technologies: React, TypeScript, Redux Toolkit, Material UI, The Trivia API"
+      "paragraph1": "Quiz App is an interactive quiz application consisting of 10 questions with four answer options each.",
+      "paragraph2": "After completing the quiz, users receive an evaluation of their answers, providing immediate feedback on their performance.",
+      "paragraph3": "Technologies: React, TypeScript, Redux Toolkit, Material UI, The Trivia API"
     },
     "section2": {
-      "paragraph1": "Film Atlas is a comprehensive film database that allows users to search for movies, TV series, and people working in the film and television industry, and to access detailed information about them.",
-      "paragraph2": "The database not only lists current theatrical releases and popular series, but also provides a preview of upcoming movies (with trailers) and shows, as well as an overview of TV series currently airing. The offering is rounded out by top lists of the highest-rated productions.",
-      "paragraph3": "Technologien: React, TypeScript, SCSS, Material UI, The Movie Database API"
+      "paragraph1": "Film Atlas is a film discovery platform that allows users to search for movies, TV series, and people in the film industry, with access to detailed information for each entry.",
+      "paragraph2": "It features current theatrical releases, popular and top-rated content, upcoming movies with trailers, and an overview of currently airing TV series.",
+      "paragraph3": "Technologies: React, TypeScript, SCSS, Material UI, The Movie Database API"
     },
-    "button": "Open Project"
+    "section3": {
+      "paragraph1": "Pin the Place is a full-stack interactive geography quiz game where users answer ten timed questions and pinpoint locations on a world map.",
+      "paragraph2": "Each round is limited to 15 seconds, and players earn up to 5 points based on the accuracy of their guess. After the quiz, users receive a detailed results view with distances, points and a summary map displaying all correct answers.",
+      "paragraph3": "Frontend: Next.js, TypeScript, Zustand, TanStack Query, shadcn/ui, Leaflet",
+      "paragraph4": "Backend: Express.js, Prisma ORM, PostgreSQL, Zod"
+    },
+    "button1": "Open Project",
+    "button2": "View Code"
   },
   "contact": {
     "title": "Contact",
