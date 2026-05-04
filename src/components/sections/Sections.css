@@ -50,6 +50,13 @@
   width: 35vw;
 }
 
+.tech-description {
+  margin: 4px;
+  font-size: 24px;
+  width: 35vw;
+  line-height: 1.6;
+}
+
 .topic-image-wrap {
   object-fit: contain;
   height: clamp(280px, 33vw, 460px);
@@ -62,6 +69,10 @@
 .topic-image {
   border-radius: 12px;
   width: 100%;
+}
+
+.project-image {
+  max-width: 45vw;
 }
 
 .button-container {
@@ -106,17 +117,11 @@
   }
 
   .early-direction-reverse .topic-image {
-    max-width: 65vw;
+    max-width: 75vw;
   }
 
   .early-direction-reverse .topic-title {
     width: 75vw;
-  }
-}
-
-@media (max-width: 950px) {
-  .early-direction-reverse .topic-image {
-    max-width: 75vw;
   }
 }
 
@@ -131,6 +136,10 @@
   }
 
   .topic-description {
+    width: 75vw;
+  }
+
+  .tech-description {
     width: 75vw;
   }
 

@@ -41,10 +41,19 @@ export default forwardRef(function AboutMe(_, ref) {
         <Zoom delay={600} duration={1400} triggerOnce>
           <div className="topic-container">
             <h1 className="topic-title">{t("about.section2.subtitle")}</h1>
-            <p className="topic-description" style={{ fontSize: "24px" }}>
-              Javascript, React.js, Next.js, TypeScript, GitHub, Redux Toolkit,
-              Zustand, SCSS, MaterialUI, shadcn/ui
+            <p className="tech-description">
+              Frontend: React, Next.js, Redux Toolkit, Zustand, TanStack Query
             </p>
+            <p className="tech-description">
+              Backend: Node.js, Express, Prisma, PostgreSQL
+            </p>
+            <p className="tech-description">
+              Languages: JavaScript, TypeScript
+            </p>
+            <p className="tech-description">
+              Styling: SCSS, Material UI, shadcn/ui
+            </p>
+            <p className="tech-description">Tools: Git</p>
           </div>
         </Zoom>
       </div>

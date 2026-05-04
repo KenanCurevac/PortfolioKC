@@ -53,7 +53,7 @@ export default forwardRef(function Contact(_, ref) {
       <Fade direction="down" delay={400} duration={1400} triggerOnce>
         <div className="icons-container">
           <a
-            href="https://www.linkedin.com/in/kenan-curevac-2624a4357/"
+            href="https://www.linkedin.com/in/kenan-%C4%87urevac-2624a4357/"
             target="_blank"
           >
             <LinkedInIcon className="icon" />

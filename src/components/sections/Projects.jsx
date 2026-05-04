@@ -30,7 +30,7 @@ export default forwardRef(function Projects(_, ref) {
             <p className="topic-description">
               {t("projects.section3.paragraph2")}
             </p>
-            <p className="topic-description">
+            <p className="topic-description" style={{ marginBottom: "0px" }}>
               {t("projects.section3.paragraph3")}
             </p>
             <p className="topic-description">
@@ -67,7 +67,11 @@ export default forwardRef(function Projects(_, ref) {
           </div>
         </Zoom>
         <Fade direction="right" delay={800} duration={1400} triggerOnce>
-          <img className="topic-image" src={pintheplace} alt="Pin the Place" />
+          <img
+            className="topic-image project-image"
+            src={pintheplace}
+            alt="Pin the Place"
+          />
         </Fade>
       </div>
       <div className="section-group early-direction-reverse">
@@ -106,7 +110,11 @@ export default forwardRef(function Projects(_, ref) {
           </div>
         </Zoom>
         <Fade direction="right" delay={800} duration={1400} triggerOnce>
-          <img className="topic-image" src={moviedb} alt="Movie Database" />
+          <img
+            className="topic-image project-image"
+            src={moviedb}
+            alt="Movie Database"
+          />
         </Fade>
       </div>
       <div className="section-group early-direction-reverse">
@@ -145,7 +153,11 @@ export default forwardRef(function Projects(_, ref) {
           </div>
         </Zoom>
         <Fade direction="right" delay={800} duration={1400} triggerOnce>
-          <img className="topic-image" src={quizapp} alt="Quiz-App" />
+          <img
+            className="topic-image project-image"
+            src={quizapp}
+            alt="Quiz-App"
+          />
         </Fade>
       </div>
     </div>
