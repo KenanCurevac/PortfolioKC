@@ -9,7 +9,7 @@
   "hero": {
     "title": "Hallo, ich bin",
     "subtitle": "SOFTWARE ENTWICKLER",
-    "paragraph": "Mit Leidenschaft für Webentwicklung entwickle ich intuitive und strukturierte Anwendungen, erweitere kontinuierlich meine technischen Fähigkeiten und arbeite gerne in motivierten Teams."
+    "paragraph": "Mit Leidenschaft für Webentwicklung entwickle ich intuitive und skalierbare Anwendungen, erweitere kontinuierlich meine Fähigkeiten und arbeite gerne in motivierten Teams."
   },
   "about": {
     "title": "Über mich",
@@ -36,7 +36,7 @@
     "title": "Werdegang",
     "section1": {
       "subtitle": "Frontend Softwareentwickler bei Bloola GmbH",
-      "paragraph": "Ich arbeitete an der Entwicklung und Wartung von Benutzeroberflächen mit React, Redux und Material UI. Dabei lag der Fokus auf der Erstellung wiederverwendbarer Komponenten, der Verwaltung des Anwendungszustands sowie der Umsetzung responsiver und interaktiver UI-Funktionen mit Fokus auf Benutzerfreundlichkeit und Performance."
+      "paragraph": "Ich arbeitete an der Entwicklung und Wartung von Benutzeroberflächen mit React, Redux und Material UI. Dabei lag der Fokus auf der Erstellung wiederverwendbarer Komponenten, der Verwaltung des Anwendungszustands sowie der Umsetzung responsiver und interaktiver UI-Funktionen."
     },
     "section2": {
       "subtitle": "Tätigkeit als Call Agent",

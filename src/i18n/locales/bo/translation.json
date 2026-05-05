@@ -1,0 +1,99 @@
+{
+  "navbar": {
+    "about": "O meni",
+    "education": "Obrazovanje",
+    "career": "Iskustvo",
+    "projects": "Projekti",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Zdravo, ja sam",
+    "subtitle": "SOFTWARE DEVELOPER",
+    "paragraph": "Sa strašću prema izradi web aplikacija, kreiram intuitivna i skalabilna rješenja, kontinuirano unapređujem svoje vještine i volim raditi u motiviranim timovima."
+  },
+  "about": {
+    "title": "O meni",
+    "section1": {
+      "subtitle": "Ko sam ja",
+      "paragraph1": "Ja sam Kenan Ćurevac, imam 28 godina i živim u Sarajevu. Završio sam Bachelor studij saobraćajnog inžinjerstva na Univerzitetu u Sarajevu. Imam izraženu sklonost prema matematici i analitičkom razmišljanju, učestvovao sam na matematičkim takmičenjima tokom školovanja, što me dovelo do programiranja.",
+      "paragraph2": "Imam dvije godine iskustva kao Software Developer, radeći na različitim oblastima frontend razvoja. Ovo iskustvo je unaprijedilo moju sposobnost strukturiranja aplikacija i rješavanja kompleksnih UI problema. Tečno govorim engleski i njemački jezik, koji sam razvio od ranog uzrasta kroz intenzivan kontakt s njemačkim medijima.",
+      "paragraph3": "Savjesno pristupam svom radu i kontinuirano unapređujem svoje znanje umjesto da dozvolim da stagnira. Volim primjenjivati ono što naučim u praksi i izradio sam više ličnih projekata kako bih dodatno razvio i učvrstio svoje vještine. Slobodno ih pogledajte - radujem se vašem javljanju!"
+    },
+    "section2": { "subtitle": "Tehničke vještine" }
+  },
+  "education": {
+    "title": "Obrazovanje",
+    "section1": {
+      "subtitle": "Studije",
+      "paragraph": "Posjedujem Bachelor diplomu iz saobraćajnog inžinjerstva sa Univerziteta u Sarajevu, Bosna i Hercegovina, smjer cestovni saobraćaj."
+    },
+    "section2": {
+      "subtitle": "Jezici",
+      "paragraph": "Posjedujem C1 certifikat iz njemačkog jezika od Goethe-Instituta. Također govorim engleski jezik na C1 nivou."
+    }
+  },
+  "career": {
+    "title": "Iskustvo",
+    "section1": {
+      "subtitle": "Frontend Software Developer u Bloola GmbH",
+      "paragraph": "Razvijao sam i održavao korisničke interfejse koristeći React, Redux i Material UI. Kreirao sam ponovo upotrebljive komponente, održavao aplikacije te implementirao responzivne i interaktivne UI funkcionalnosti."
+    },
+    "section2": {
+      "subtitle": "Pozicija Call Agent",
+      "paragraph": "Radio sam kao Call Agent, pružajući podršku i savjetovanje korisnicima iz Njemačke, te učestvovao u sklapanju ugovora za električnu energiju, plin, internet i telefoniju. Unaprijedio sam komunikacijske vještine, empatiju i rad s korisnicima."
+    },
+    "section3": {
+      "subtitle": "Praksa u Općini Hadžići",
+      "paragraph": "Obavio sam praksu u Općini Hadžići, u Službi za razvoj i stambeno-komunalne poslove. Radio sam na obradi dokumenata, korespondenciji i administrativnim zadacima koristeći Microsoft Word i Excel."
+    }
+  },
+  "projects": {
+    "title": "Projekti",
+    "section1": {
+      "paragraph1": "Quiz App je interaktivni kviz koji se sastoji od 10 pitanja sa po četiri ponuđena odgovora.",
+      "paragraph2": "Nakon završetka, korisnici dobijaju evaluaciju svojih odgovora uz direktan uvid u rezultat.",
+      "paragraph3": "Tehnologije: React, TypeScript, Redux Toolkit, Material UI, The Trivia API"
+    },
+    "section2": {
+      "paragraph1": "Film Atlas je platforma za otkrivanje filmova koja omogućava korisnicima pretragu filmova, TV serija i osoba iz filmske industrije, uz pristup detaljnim informacijama za svaki unos.",
+      "paragraph2": "Sadrži aktuelne kino projekcije, popularan i najbolje ocijenjen sadržaj, nadolazeće filmove sa trailerima, kao i pregled trenutno emitovanih TV serija.",
+      "paragraph3": "Tehnologije: React, TypeScript, SCSS, Material UI, The Movie Database API"
+    },
+    "section3": {
+      "paragraph1": "Pin the Place je full-stack interaktivni geografski kviz u kojem korisnici odgovaraju na deset vremenski ograničenih pitanja i označavaju lokacije na karti svijeta.",
+      "paragraph2": "Svaka runda traje 15 sekundi, a igrači osvajaju do 5 bodova u zavisnosti od toga koliko je njihov pokušaj blizu tačne lokacije. Nakon kviza, korisnici dobijaju detaljan pregled rezultata sa udaljenostima, bodovima i mapom sa svim tačnim odgovorima.",
+      "paragraph3": "Frontend: Next.js, TypeScript, Zustand, TanStack Query, shadcn/ui, Leaflet",
+      "paragraph4": "Backend: Express.js, Prisma ORM, PostgreSQL, Zod"
+    },
+    "button1": "Otvori projekat",
+    "button2": "Pogledaj kod"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "or": "ili",
+    "subtitle": "Pošaljite mi poruku!",
+    "paragraphStart": "Imate pitanje, ponudu ili samo želite reći zdravo?",
+    "paragraphEnd": "",
+    "formLabel": {
+      "name": "Vaše ime",
+      "email": "Email adresa",
+      "message": "Vaša poruka"
+    },
+    "errorMessage": {
+      "name": "Molimo unesite svoje ime",
+      "email": "Molimo unesite ispravnu email adresu",
+      "message": "Molimo napišite poruku"
+    },
+    "tooltip": {
+      "name": "Kako da vam se obratim?",
+      "email": "Ovdje ću vam se javiti",
+      "message": "Molimo opišite svoju ideju ili zahtjev"
+    },
+    "placeholder": "Zdravo, hajde da razgovaramo o saradnji!",
+    "submitButton": "Pošalji",
+    "snackbar": {
+      "success": "Poruka je uspješno poslana!",
+      "error": "Poruka nije mogla biti poslana, pokušajte ponovo."
+    }
+  }
+}

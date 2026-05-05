@@ -55,10 +55,15 @@ export default forwardRef(function Contact(_, ref) {
           <a
             href="https://www.linkedin.com/in/kenan-%C4%87urevac-2624a4357/"
             target="_blank"
+            rel="noreferrer"
           >
             <LinkedInIcon className="icon" />
           </a>
-          <a href="https://github.com/KenanCurevac" target="_blank">
+          <a
+            href="https://github.com/KenanCurevac"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GitHubIcon className="icon" />
           </a>
         </div>

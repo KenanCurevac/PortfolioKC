@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import german from "../../assets/germany-flag-icon.png";
 import english from "../../assets/united-kingdom-flag-icon.png";
+import bosnian from "../../assets/bosnia-and-herzegovina.png";
 import CheckIcon from "@mui/icons-material/Check";
 
 export default function Dropdown({ language, onLanguageChange }) {
@@ -50,7 +51,15 @@ export default function Dropdown({ language, onLanguageChange }) {
           renderValue={(selected) => (
             <div className="selected-flag-wrap">
               <img
-                src={selected === "de" ? german : english}
+                src={
+                  selected === "en"
+                    ? english
+                    : selected === "de"
+                      ? german
+                      : selected === "bo"
+                        ? bosnian
+                        : english
+                }
                 alt={selected}
                 className="selected-flag"
               />
@@ -64,6 +73,10 @@ export default function Dropdown({ language, onLanguageChange }) {
           <MenuItem value="de">
             <img src={german} alt="Deutsch" className="flag" /> Deutsch
             {language === "de" && <CheckIcon className="checkmark" />}
+          </MenuItem>
+          <MenuItem value="bo">
+            <img src={bosnian} alt="Bosanski" className="flag" /> Bosanski
+            {language === "bo" && <CheckIcon className="checkmark" />}
           </MenuItem>
         </Select>
       </FormControl>

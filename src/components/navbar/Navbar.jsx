@@ -31,7 +31,7 @@ export default function Navbar(props) {
   return (
     <Fade direction="down" delay={200} triggerOnce>
       <div className="navbar">
-        <img src={logo} className="navbar-logo" />
+        <img src={logo} className="navbar-logo" alt="Logo" />
 
         <NavLinks
           {...props}

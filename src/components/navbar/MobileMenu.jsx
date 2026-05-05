@@ -19,7 +19,7 @@ export default function MobileMenu({
       anchor="right"
     >
       <div className="sidenav-top">
-        <img src={logo} className="sidenav-logo" />
+        <img src={logo} className="sidenav-logo" alt="Logo" />
         <Button
           className="sidenav-close-button"
           onClick={() => onToggleMobileMenu(false)}
