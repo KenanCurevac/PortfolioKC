@@ -16,7 +16,7 @@ export default forwardRef(function AboutMe(_, ref) {
       <div className="section-group direction-reverse">
         <Fade direction="left" delay={800} duration={1400} triggerOnce>
           <div className="topic-image-wrap" style={{ marginBottom: "40px" }}>
-            <img className="topic-image" src={cvPicture} alt="Photo" />
+            <img className="topic-image" src={cvPicture} alt="CV Picture" />
           </div>
         </Fade>
         <Zoom delay={600} duration={1400} triggerOnce>
