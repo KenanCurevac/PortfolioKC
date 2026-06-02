@@ -16,7 +16,7 @@
     "section1": {
       "subtitle": "Ko sam ja",
       "paragraph1": "Ja sam Kenan Ćurevac, imam 28 godina i živim u Sarajevu. Završio sam Bachelor studij saobraćajnog inžinjerstva na Univerzitetu u Sarajevu. Imam izraženu sklonost prema matematici i analitičkom razmišljanju, učestvovao sam na matematičkim takmičenjima tokom školovanja, što me dovelo do programiranja.",
-      "paragraph2": "Imam dvije godine iskustva kao Software Developer, radeći na različitim oblastima frontend razvoja. Ovo iskustvo je unaprijedilo moju sposobnost strukturiranja aplikacija i rješavanja kompleksnih UI problema. Tečno govorim engleski i njemački jezik, koji sam razvio od ranog uzrasta kroz intenzivan kontakt s njemačkim medijima.",
+      "paragraph2": "Imam dvije godine iskustva u softverskoj industriji, uključujući jednu godinu rada kao Frontend Developer i jednu godinu u Quality Assurance. Ovo iskustvo je unaprijedilo moju sposobnost strukturiranja aplikacija i rješavanja kompleksnih UI problema. Tečno govorim engleski i njemački jezik, koji sam razvio od ranog uzrasta kroz intenzivan kontakt s njemačkim medijima.",
       "paragraph3": "Savjesno pristupam svom radu i kontinuirano unapređujem svoje znanje umjesto da dozvolim da stagnira. Volim primjenjivati ono što naučim u praksi i izradio sam više ličnih projekata kako bih dodatno razvio i učvrstio svoje vještine. Slobodno ih pogledajte - radujem se vašem javljanju!"
     },
     "section2": { "subtitle": "Tehničke vještine" }
@@ -35,8 +35,9 @@
   "career": {
     "title": "Iskustvo",
     "section1": {
-      "subtitle": "Frontend Software Developer u Bloola GmbH",
-      "paragraph": "Razvijao sam i održavao korisničke interfejse koristeći React, TypeScript, Redux Toolkit i Material UI. Kreirao sam ponovo upotrebljive komponente, održavao aplikacije te implementirao responzivne i interaktivne UI funkcionalnosti."
+      "subtitle": "Frontend Developer & QA Engineer u Bloola GmbH",
+      "paragraph1": "Radio sam kao Frontend Developer na razvoju i održavanju korisničkih interfejsa koristeći React, TypeScript, Redux Toolkit i Material UI. Kreirao sam ponovo upotrebljive komponente, održavao aplikacije te implementirao responzivne i interaktivne UI funkcionalnosti.",
+      "paragraph2": "Dodatno sam radio u oblasti Quality Assurance gdje sam vršio manuelno testiranje, validirao funkcionalnost aplikacije kroz različite scenarije, dokumentovao greške i doprinio ukupnom kvalitetu softvera."
     },
     "section2": {
       "subtitle": "Pozicija Call Agent",

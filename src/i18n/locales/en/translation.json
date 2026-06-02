@@ -16,7 +16,7 @@
     "section1": {
       "subtitle": "Who I Am",
       "paragraph1": "I am Kenan Ćurevac, a 28-year-old engineer with a Bachelor's degree in Traffic Engineering from the University of Sarajevo, where I currently live. I have a strong affinity for mathematics and analytical thinking and participated in math competitions during my school years, which led me to programming.",
-      "paragraph2": "I gained two years of experience as a Software Developer, working across various aspects of frontend development. This experience strengthened my ability to structure applications and solve complex UI problems. I am fluent in English and German, having developed my German language skills from a young age through extensive exposure to German media.",
+      "paragraph2": "I gained two years of experience in the software industry, including one year as a Frontend Developer and one year in Quality Assurance. This experience strengthened my ability to structure applications and solve complex UI problems. I am fluent in English and German, having developed my German language skills from a young age through extensive exposure to German media.",
       "paragraph3": "I take pride in my work and continuously expand my knowledge rather than let it stagnate. I enjoy applying what I learn in practice and have built several personal projects to further solidify and extend my skills. Feel free to take a look at them - I look forward to hearing from you!"
     },
     "section2": { "subtitle": "Technical Skills" }
@@ -35,8 +35,9 @@
   "career": {
     "title": "Experience",
     "section1": {
-      "subtitle": "Frontend Software Developer at Bloola GmbH",
-      "paragraph": "Worked on building and maintaining user interfaces using React, TypeScript, Redux, and Material UI. Focused on developing reusable components, managing application state, and implementing responsive and interactive UI features."
+      "subtitle": "Frontend Developer & QA Engineer at Bloola GmbH",
+      "paragraph1": "Worked as a Frontend Developer building and maintaining user interfaces using React, TypeScript, Redux Toolkit and Material UI. Focused on developing reusable components, managing application state, and implementing responsive and interactive UI features.",
+      "paragraph2": "Additionally worked in Quality Assurance, performing manual testing, validating application functionality across different user scenarios, documenting issues, and contributing to overall software quality."
     },
     "section2": {
       "subtitle": "Position as a Call Agent",

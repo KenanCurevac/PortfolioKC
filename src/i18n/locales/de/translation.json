@@ -16,7 +16,7 @@
     "section1": {
       "subtitle": "Wer ich bin",
       "paragraph1": "Ich bin Kenan Ćurevac, 28 Jahre alt, Ingenieur mit einem Bachelorabschluss in Verkehrsingenieurwesen von der Universität Sarajevo, wo ich derzeit lebe. Ich habe eine starke Affinität zu Mathematik und analytischem Denken und habe während meiner Schulzeit an Mathematikwettbewerben teilgenommen, was dazu führte, dass ich das Programmieren entdeckte.",
-      "paragraph2": "Ich habe zwei Jahre Erfahrung als Softwareentwickler gesammelt und in verschiedenen Bereichen der Frontend-Entwicklung gearbeitet. Diese Erfahrung hat meine Fähigkeit gestärkt, Anwendungen zu strukturieren und komplexe UI-Probleme zu lösen. Ich spreche fließend Englisch und Deutsch und habe meine Deutschkenntnisse bereits in jungen Jahren durch intensiven Kontakt mit deutschsprachigen Medien entwickelt.",
+      "paragraph2": "Ich habe zwei Jahre Erfahrung in der Softwareentwicklung gesammelt, darunter ein Jahr als Frontend-Entwickler und ein Jahr im Bereich Quality Assurance. Diese Erfahrung hat meine Fähigkeit gestärkt, Anwendungen zu strukturieren und komplexe UI-Probleme zu lösen. Ich spreche fließend Englisch und Deutsch und habe meine Deutschkenntnisse bereits in jungen Jahren durch intensiven Kontakt mit deutschsprachigen Medien entwickelt.",
       "paragraph3": "Ich bin stolz auf meine Arbeit und erweitere mein Wissen kontinuierlich, anstatt es stagnieren zu lassen. Ich setze das Gelernte gerne in die Praxis um und habe mehrere eigene Projekte realisiert, um meine Fähigkeiten weiter zu festigen und auszubauen. Schauen Sie sich gerne meine Projekte an - ich freue mich darauf, von Ihnen zu hören!"
     },
     "section2": { "subtitle": "Technische Fähigkeiten" }
@@ -35,8 +35,9 @@
   "career": {
     "title": "Werdegang",
     "section1": {
-      "subtitle": "Frontend Softwareentwickler bei Bloola GmbH",
-      "paragraph": "Ich arbeitete an der Entwicklung und Wartung von Benutzeroberflächen mit React, TypeScript, Redux Toolkit und Material UI. Dabei lag der Fokus auf der Erstellung wiederverwendbarer Komponenten, der Verwaltung des Anwendungszustands sowie der Umsetzung responsiver und interaktiver UI-Funktionen."
+      "subtitle": "Frontend Developer & QA Engineer bei Bloola GmbH",
+      "paragraph1": "Ich arbeitete als Frontend Developer an der Entwicklung und Wartung von Benutzeroberflächen mit React, TypeScript, Redux Toolkit und Material UI. Dabei lag der Fokus auf der Erstellung wiederverwendbarer Komponenten, der Verwaltung des Anwendungszustands sowie der Umsetzung responsiver und interaktiver UI-Funktionen.",
+      "paragraph2": "Zusätzlich war ich im Bereich Quality Assurance tätig und führte manuelle Tests durch, validierte die Funktionalität der Anwendung über verschiedene Szenarien hinweg, dokumentierte Fehler und trug zur allgemeinen Softwarequalität bei."
     },
     "section2": {
       "subtitle": "Tätigkeit als Call Agent",

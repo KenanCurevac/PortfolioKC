@@ -22,7 +22,10 @@ export default forwardRef(function Career(_, ref) {
           <div className="topic-container">
             <h1 className="topic-title"> {t("career.section1.subtitle")}</h1>
             <p className="topic-description">
-              {t("career.section1.paragraph")}
+              {t("career.section1.paragraph1")}
+            </p>
+            <p className="topic-description">
+              {t("career.section1.paragraph2")}
             </p>
           </div>
         </Zoom>
